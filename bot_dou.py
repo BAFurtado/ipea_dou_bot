@@ -59,6 +59,7 @@ def get_main_text(text, db='dou.csv', path='/home/furtado/Documents/Professor/Py
         data = pd.read_csv(os.path.join(path, f'data/{db}'), sep=';')
         data = data.set_index('document')
     except FileNotFoundError:
+        os.mkdir('data')
         data = pd.DataFrame(columns=['siape', 'das', 'context'])
         data.index.name = 'document'
     das_pattern = r'(DAS \d+.\d+)'
