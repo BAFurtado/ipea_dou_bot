@@ -9,18 +9,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Initiate repo
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
       - name: Setting up Python
-      - uses: actions/setup-python@v4
-      - with:
-        python-version: '3.9'
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
       - name: Installing all necessary packages
         run: pip install chromedriver-autoinstaller selenium pyvirtualdisplay pandas
       - name: Install xvfb
         run: sudo apt-get install xvfb
 
       - name: Running python script
-      run: python bot_dou.py
+        run: python bot_dou.py
 
       - name: Commit and Push The Results From Python Selenium Action
         run: |
