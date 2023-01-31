@@ -15,7 +15,6 @@
 
 """
 import os
-# re : regular expression -- biblioteca para filtar, localizar, extrair textos ou sub-textos de textos gigantes
 import re
 
 import pandas as pd
@@ -52,14 +51,15 @@ def building_query(secao, data, palavra):
     return fr'https://www.in.gov.br/consulta/-/buscar/dou?q={palavra}+&s=do{secao}&exactDate={data}&sortType=0'
 
 
-def get_main_text(text, db='dou.csv', path='/home/furtado/Documents/Professor/Python2022'):
+def get_main_text(text, db='dou.csv', path=''):
     """ Extrai os dados do documento e grava em arquivo pandas que é reutilizável
     """
     try:
         data = pd.read_csv(os.path.join(path, f'data/{db}'), sep=';')
         data = data.set_index('document')
     except FileNotFoundError:
-        os.mkdir('data')
+        if not os.path.exists('data'):
+            os.mkdir('data')
         data = pd.DataFrame(columns=['siape', 'das', 'context'])
         data.index.name = 'document'
     das_pattern = r'(DAS \d+.\d+)'
