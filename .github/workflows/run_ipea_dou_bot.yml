@@ -3,7 +3,7 @@ name: run_ipea_dou_bot
 run-name: ${{ github.actor }} keeps updated with DOU changes at Ipea
 on: 
   schedule:
-    - cron: '30 7 * * 1-5'
+    - cron: '30 10 * * 1-5'
 jobs:
   scrape:
     runs-on: ubuntu-latest
