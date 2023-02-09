@@ -73,16 +73,21 @@ def get_main_text(text, db='dou.csv', path=''):
     else:
         idx = lines[3] + lines_no[0]
     if idx not in data.index:
-        for i in range(len(lines_no)):
-            try:
-                data.loc[lines[3] + lines_no[i], 'context'] = lines[5 + i]
-                if re.findall(das_pattern, lines[5 + i]):
-                    data.loc[lines[3] + lines_no[i], 'das'] = re.findall(das_pattern, lines[5 + i])
-                if re.findall(siape_pattern, lines[5 + i]):
-                    data.loc[lines[3] + lines_no[i], 'siape'] = re.findall(siape_pattern, lines[5 + i])
-                print(lines[5 + i])
-            except ValueError:
-                break
+        with open('README.md', 'w') as writer:
+            writer.writelines(
+                        """ ### Ipea DOU bot data\n This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea"""
+                    )
+            for i in range(len(lines_no)):
+                try:
+                    data.loc[lines[3] + lines_no[i], 'context'] = lines[5 + i]
+                    if re.findall(das_pattern, lines[5 + i]):
+                        data.loc[lines[3] + lines_no[i], 'das'] = re.findall(das_pattern, lines[5 + i])
+                    if re.findall(siape_pattern, lines[5 + i]):
+                        data.loc[lines[3] + lines_no[i], 'siape'] = re.findall(siape_pattern, lines[5 + i])
+                        writer.writelines(lines[5 + i])
+                        print(lines[5 + i])
+                except ValueError:
+                    break
         data.to_csv(os.path.join(path, f'data/{db}'), sep=';')
 
 
