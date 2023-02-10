@@ -16,7 +16,7 @@
 """
 import os
 import re
-
+import datetime
 import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -75,17 +75,20 @@ def get_main_text(text, db='dou.csv', path=''):
     if idx not in data.index:
         with open('README.md', 'w') as writer:
             writer.writelines(
-                        """ ### Ipea DOU bot data\n This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea"""
+                        """ ### Ipea DOU bot data\n This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea\n Last changes include: """
                     )
             for i in range(len(lines_no)):
                 try:
                     data.loc[lines[3] + lines_no[i], 'context'] = lines[5 + i]
+                    today = datetime.date.today()
+                    date_time = today.strftime("%d %B, %Y")
+                    writer.writelines(date_time + '\n')
+                    writer.writelines(lines[5 + i] + '\n')
+                    print(lines[5 + i])
                     if re.findall(das_pattern, lines[5 + i]):
                         data.loc[lines[3] + lines_no[i], 'das'] = re.findall(das_pattern, lines[5 + i])
                     if re.findall(siape_pattern, lines[5 + i]):
                         data.loc[lines[3] + lines_no[i], 'siape'] = re.findall(siape_pattern, lines[5 + i])
-                        writer.writelines(lines[5 + i])
-                        print(lines[5 + i])
                 except ValueError:
                     break
         data.to_csv(os.path.join(path, f'data/{db}'), sep=';')
