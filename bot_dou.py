@@ -39,6 +39,8 @@ def get_texts(site, process=True):
         out = tab.find_element(By.ID, 'materia').text
         if process:
             get_main_text(out)
+            last = pd.read_csv('data/dou.csv', sep=';').tail()
+            last.to_csv('data/last.csv', sep=';')
         res2.append(out)
         tab.quit()
     browser.quit()
@@ -75,14 +77,16 @@ def get_main_text(text, db='dou.csv', path=''):
     if idx not in data.index:
         with open('README.md', 'w') as writer:
             writer.writelines(
-                        """ ### Ipea DOU bot data\n This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea\n Last changes include: """
+                        """ ### Ipea DOU bot data\n This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea\n 
+                        
+                        Very last change: \n \t """
                     )
+            today = datetime.date.today()
+            date_time = today.strftime("%d %B, %Y")
+            writer.writelines(date_time + '\n' + '\t')
             for i in range(len(lines_no)):
                 try:
                     data.loc[lines[3] + lines_no[i], 'context'] = lines[5 + i]
-                    today = datetime.date.today()
-                    date_time = today.strftime("%d %B, %Y")
-                    writer.writelines(date_time + '\n')
                     writer.writelines(lines[5 + i] + '\n')
                     print(lines[5 + i])
                     if re.findall(das_pattern, lines[5 + i]):
