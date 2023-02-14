@@ -22,7 +22,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 options = webdriver.ChromeOptions()
-# options.add_argument("--headless")
+options.add_argument("--headless")
 
 
 def get_texts(site, process=True):
