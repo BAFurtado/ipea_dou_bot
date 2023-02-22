@@ -38,9 +38,18 @@ def get_texts(site, process=True):
         tab.get(link)
         out = tab.find_element(By.ID, 'materia').text
         if process:
-            get_main_text(out)
-            last = pd.read_csv('data/dou.csv', sep=';').tail()
-            last.to_csv('data/last.csv', sep=';')
+            flag = get_main_text(out)
+            if flag:
+                with open('README.md', 'w') as writer:
+                    writer.writelines(
+                        """ ### Ipea DOU bot data\n This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea\n 
+                        Very last change: \n \t """
+                    )
+                    today = datetime.date.today()
+                    date_time = today.strftime("%d %B, %Y")
+                    writer.writelines(date_time + '\n' + '\t')
+                    last = pd.read_csv('data/dou.csv', sep=';').tail()
+                    writer.writelines(last.tail(1).reset_index().loc[0, 'context'] + '\n')
         res2.append(out)
         tab.quit()
     browser.quit()
@@ -56,6 +65,7 @@ def building_query(secao, data, palavra):
 def get_main_text(text, db='dou.csv', path=''):
     """ Extrai os dados do documento e grava em arquivo pandas que é reutilizável
     """
+    flag = False
     try:
         data = pd.read_csv(os.path.join(path, f'data/{db}'), sep=';')
         data = data.set_index('document')
@@ -75,27 +85,19 @@ def get_main_text(text, db='dou.csv', path=''):
     else:
         idx = lines[3] + lines_no[0]
     if idx not in data.index:
-        with open('README.md', 'w') as writer:
-            writer.writelines(
-                        """ ### Ipea DOU bot data\n This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea\n 
-                        
-                        Very last change: \n \t """
-                    )
-            today = datetime.date.today()
-            date_time = today.strftime("%d %B, %Y")
-            writer.writelines(date_time + '\n' + '\t')
-            for i in range(len(lines_no)):
-                try:
-                    data.loc[lines[3] + lines_no[i], 'context'] = lines[5 + i]
-                    writer.writelines(lines[5 + i] + '\n')
-                    print(lines[5 + i])
-                    if re.findall(das_pattern, lines[5 + i]):
-                        data.loc[lines[3] + lines_no[i], 'das'] = re.findall(das_pattern, lines[5 + i])
-                    if re.findall(siape_pattern, lines[5 + i]):
-                        data.loc[lines[3] + lines_no[i], 'siape'] = re.findall(siape_pattern, lines[5 + i])
-                except ValueError:
-                    break
-        data.to_csv(os.path.join(path, f'data/{db}'), sep=';')
+        flag = True
+        for i in range(len(lines_no)):
+            try:
+                data.loc[lines[3] + lines_no[i], 'context'] = lines[5 + i]
+                print(lines[5 + i])
+                if re.findall(das_pattern, lines[5 + i]):
+                    data.loc[lines[3] + lines_no[i], 'das'] = re.findall(das_pattern, lines[5 + i])
+                if re.findall(siape_pattern, lines[5 + i]):
+                    data.loc[lines[3] + lines_no[i], 'siape'] = re.findall(siape_pattern, lines[5 + i])
+            except ValueError:
+                break
+    data.to_csv(os.path.join(path, f'data/{db}'), sep=';')
+    return flag
 
 
 if __name__ == '__main__':

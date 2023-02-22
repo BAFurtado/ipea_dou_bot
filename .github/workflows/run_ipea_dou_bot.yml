@@ -59,7 +59,7 @@ jobs:
             body: Build job of ${{github.repository}} completed successfully!
             ignore_cert: true
             # Optional attachments:
-            attachments: data/last.csv
+            attachments: README.md
       
       
       
