@@ -3,5 +3,5 @@
  
                         
                         Very last change: 
- 	 20 February, 2023
-	Dispensar o servidor DEMERSON ANDRE POLLI, Matrícula SIAPE nº XX152XX, da Função Comissionada de Coordenador-Geral de Ciência de Dados e Tecnologia da Informação - CGDTI, código FCE 1.14, do Instituto de Pesquisa Econômica Aplicada - IPEA.
+ 	 22 February, 2023
+	Autorizar o afastamento do País do servidor Rodrigo Fracalossi de Moraes, ocupante do cargo Técnico de Planejamento e Pesquisa, matrícula SIAPE nº 1734056, da Diretoria de Estudos Internacionais - DINTE, do Instituto de Pesquisa Econômica Aplicada - IPEA, para participar da 64ª Convenção Anual: Lutas Reais, Altos Riscos: Cooperação, Contenda e Criatividade, em Montreal/Canadá, no período de 12 a 19 de março de 2023, incluído trânsito, com ônus limitado para o IPEA.
