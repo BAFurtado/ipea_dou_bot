@@ -2,5 +2,5 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 23 February, 2023
-	Conceder aposentadoria voluntária ao servidor SIDRACH DANTAS DE MORAIS, Auxiliar Técnico, AT-NI-S-IV, do Quadro de Pessoal desta Fundação, matrícula SIAPE nº XX603XX, com fundamento no art. 20, § 2º, da Emenda Constitucional nº 103, de 12 de novembro de 2019, declarando em decorrência a vacância do cargo (processo n.º 03001.000564/2023-25)
+ 	 27 February, 2023
+	Art. 1º Disponibilizar a requisição do servidor ANDRÉ BOJIKIAN CALIXTRE, matrícula nº XX719XX, pertencente ao Quadro de Pessoal do Instituto de Pesquisa Econômica Aplicada - IPEA, para exercer a função comissionada de Assessor Especial, código FCE 1.15, no Gabinete Adjunto de Informações e Apoio à Decisão do Gabinete Pessoal do Presidente da República.
