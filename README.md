@@ -2,5 +2,5 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 28 February, 2023
-	Autorizar o afastamento do País do servidor Luis Claudio Kubota, ocupante do cargo Técnico de Planejamento e Pesquisa, matrícula SIAPE nº XX597XX, da Diretoria de Estudos e Políticas Setoriais, de Inovação, Regulação e Infraestrutura - DISET, do Instituto de Pesquisa Econômica Aplicada - IPEA, para participar da oficina "Digitalização da Administração Pública em Países Federativos", em Ottawa/Canadá, no período de 25 a 29 de abril de 2023, incluído trânsito, com ônus limitado para o IPEA.
+ 	 01 March, 2023
+	Art. 1º Disponibilizar a requisição do servidor ANDRÉ BOJIKIAN CALIXTRE, matrícula nº XX719XX, pertencente ao Quadro de Pessoal do Instituto de Pesquisa Econômica Aplicada - IPEA, para exercer a função comissionada de Assessor Especial, código FCE 2.15, no Gabinete Adjunto de Informações e Apoio à Decisão do Gabinete Pessoal do Presidente da República.
