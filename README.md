@@ -2,5 +2,5 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 18 April, 2023
-	Convalidar os atos praticados pela servidora ISABEL VIRGINIA DE ALENCAR PIRES, matrícula SIAPE nº XX535XX, por ter respondido no encargo de substituta eventual do Coordenador de Gestão de Pessoas e Projetos - COGPP, código FCE 1.10, da Gerência Regional do Instituto de Pesquisa Econômica Aplicada - IPEA, no Rio de Janeiro, no período de 7 de outubro 2022 a 15 de outubro de 2022.
+ 	 19 April, 2023
+	Designar o servidor JOÃO CLAUDIO GARCIA RODRIGUES LIMA, matrícula SIAPE nº XX013XX, para o encargo de substituto eventual do Coordenador-Geral de Imprensa e Comunicação Social - CGCOM, código FCE 1.13, do Gabinete da Presidência do Instituto de Pesquisa Econômica Aplicada - IPEA, nos afastamentos e impedimentos legais ou regulamentares do titular.
