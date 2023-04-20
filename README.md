@@ -2,5 +2,5 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 19 April, 2023
-	Designar o servidor JOÃO CLAUDIO GARCIA RODRIGUES LIMA, matrícula SIAPE nº XX013XX, para o encargo de substituto eventual do Coordenador-Geral de Imprensa e Comunicação Social - CGCOM, código FCE 1.13, do Gabinete da Presidência do Instituto de Pesquisa Econômica Aplicada - IPEA, nos afastamentos e impedimentos legais ou regulamentares do titular.
+ 	 20 April, 2023
+	APROVAR A SELEÇÃO procedida pela Escola Superior de Guerra (ESG), em conformidade com o que preconiza Portaria GM-MD nº 4.859, de 15 de setembro de 2022, dos candidatos a seguir relacionados para matrícula no Curso de Altos Estudos em Defesa (CAED) edição 2023, da Escola Superior em Defesa (ESD), sediada em Brasília/DF, a ser realizado na modalidade presencial no período de 27 de fevereiro a 1º de dezembro de 2023, ficando convalidadas as atividades relativas ao Curso já realizadas até a data de publicação desta Portaria.
