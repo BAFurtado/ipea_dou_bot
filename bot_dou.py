@@ -49,7 +49,8 @@ def get_texts(site, process=True):
                     date_time = today.strftime("%d %B, %Y")
                     writer.writelines(date_time + '\n' + '\t')
                     last = pd.read_csv('data/dou.csv', sep=';').tail()
-                    writer.writelines(last.tail(1).reset_index().loc[0, 'context'] + '\n')
+                    for i in range(1, 5):
+                        writer.writelines(last.tail(i).reset_index().loc[0, 'context'] + '\n')
         res2.append(out)
         tab.quit()
     browser.quit()
