@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 03 May, 2023
+ 	 04 May, 2023
 	Designar a servidora ADRIANA MARIA MAGALHÃES DE MOURA, Matrícula SIAPE n° XX392XX, para exercer a função comissionada de Coordenadora de Estudos em Sustentabilidade Ambiental - COSAM, código FCE 1.10, da Coordenação-Geral de Estudos e Políticas Regionais, Urbanas e Ambientais - CGRUR, da Diretoria de Estudos e Políticas Regionais, Urbanos e Ambientais - DIRUR, do Instituto de Pesquisa Econômica Aplicada - IPEA.
 Dispensar a servidora ADRIANA MARIA MAGALHÃES DE MOURA, Matrícula SIAPE n° XX392XX, do encargo de substituta eventual do Coordenador de Estudos em Sustentabilidade Ambiental - COSAM, código FCE 1.10, da Coordenação-Geral de Estudos e Políticas Regionais, Urbanas e Ambientais - CGRUR, da Diretoria de Estudos e Políticas Regionais, Urbanos e Ambientais - DIRUR, do Instituto de Pesquisa Econômica Aplicada - IPEA.
 Nº 234 - Dispensar o servidor CHRISTIAN VONBUN, Matrícula SIAPE Nº XX609XX, da função comissionada de Coordenador de Gestão de Informações e de Estudos Especiais em Macroeconomia - COGIE, código FCE 1.10, da Coordenação-Geral de Estudos e Políticas Macroeconômicas - CGMAC, da Diretoria de Estudos e Políticas Macroeconômicas - DIMAC, do Instituto de Pesquisa Econômica Aplicada - IPEA.
