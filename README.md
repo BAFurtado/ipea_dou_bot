@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 19 June, 2023
+ 	 20 June, 2023
 	Dispensar o servidor ROBERTO PIRES MESSENBERG, Matrícula SIAPE nº XX018XX, do encargo de substituto eventual do Coordenador de Gestão de Informações e de Estudos Especiais em Macroeconomia - COGIE, código FCE 1.10, da Coordenação-Geral de Estudos e Políticas Macroeconômicas - CGMAC, da Diretoria de Estudos e Políticas Macroeconômicas - DIMAC, do Instituto de Pesquisa Econômica Aplicada - IPEA.
 Designar o servidor ROBERTO PIRES MESSENBERG, Matrícula SIAPE nº XX018XX, para exercer a Função Comissionada de Coordenador de Gestão de Informações e de Estudos Especiais em Macroeconomia - COGIE, código FCE 1.10, da Coordenação-Geral de Estudos e Políticas Macroeconômicas - CGMAC, da Diretoria de Estudos e Políticas Macroeconômicas - DIMAC, do Instituto de Pesquisa Econômica Aplicada - IPEA.
 Designar o servidor FABIANO MEZADRE POMPERMAYER, Matrícula SIAPE n° XX889XX, para o encargo de substituto eventual do Coordenador de Métodos, Dados e Projeções Microeconômicas - COMIC, código FCE 1.10, da Coordenação-Geral de Estudos e Políticas Setoriais, de Inovação, Regulação e Infraestrutura - CGSET, da Diretoria de Estudos e Políticas Setoriais, de Inovação, Regulação e Infraestrutura - DISET, do Instituto de Pesquisa Econômica Aplicada - IPEA, nos afastamentos e impedimentos legais ou regulamentares do titular.
