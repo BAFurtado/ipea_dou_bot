@@ -2,8 +2,8 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 08 August, 2023
-	DESIGNAR os militares abaixo relacionados, para participarem do "Initial Planning Event (IPE) do ciclo de vida do Exercício FLINTLOCK 2024", na cidade de Amsterdã, Holanda, no período de 19 a 27 de agosto de 2023, incluindo o trânsito, com ônus total para o Ministério da Defesa:
-DESIGNAR, os militares e civis, abaixo relacionados, para participar da Viagem de Estudo Interdisciplinar de Campo do Curso de Altos Estudos em Defesa - 2023, na cidade de Washington, D.C., Estados Unidos da América, no período de 14 a 21 de outubro de 2023, incluindo o trânsito, com ônus parcial para Escola Superior de Defesa:
-Art. 2º Os efeitos desta Portaria entram em vigor na data do requerimento, 12 de junho de 2023.
-Art. 1º Conceder pensão à Marlene Allan de Souza Fernandes, na qualidade de cônjuge do ex-servidor Almir Fernandes, ocupante do cargo Técnico de Planejamento e Pesquisa, matricula Siape XXX657XXX, do quadro de pessoal deste Instituto de Pesquisa Econômica Aplicada - Ipea, falecido quando aposentado, em 25 de janeiro de 2023, com fundamento no inciso I do art. 3º da Portaria SGP/SEDGG/ME Nº 4645, de 24 de maio de 2022, c/c o art. 217 da Lei nº 8.112, de 11 de dezembro de 1990, e art. 2º da Lei nº 10.887, de 18 de junho de 2004 ou art. 23 da Emenda Constitucional nº 103, de 12 de novembro de 2019.
+ 	 10 August, 2023
+	Conceder aposentadoria voluntária ao servidor ORLANDO REZENDE DE CASTRO, Auxiliar Técnico, AT-NI-S-IV, do Quadro de Pessoal desta Fundação, matrícula SIAPE nº xx973xx, com fundamento no art. 20 e seu § 2º, I, c/c art. 4º, § 8º da Emenda Constitucional nº 103, de 12 de novembro de 2019, declarando em decorrência a vacância do cargo (processo n.º 03001.002528/2023-04).
+Exonerar o servidor LEÔNIDAS PIRES NETO, Matrícula SIAPE n° XX596XX, do cargo em comissão de Coordenador-Geral de Gestão de Pessoas - CGPES, código CCE 1.13, da Diretoria de Desenvolvimento Institucional - DIDES, do Instituto de Pesquisa Econômica Aplicada - IPEA.
+Nomear a servidora ANNA CAROLINA MENDONCA LEMOS RIBEIRO, Matrícula SIAPE n° XX451XX, para exercer o cargo em comissão de Coordenadora-Geral de Gestão de Pessoas - CGPES, código CCE 1.13, da Diretoria de Desenvolvimento Institucional - DIDES, do Instituto de Pesquisa Econômica Aplicada - IPEA, ficando dispensada da função comissionada que atualmente ocupa.
+DESIGNAR os militares abaixo relacionados, para participarem do "Initial Planning Event (IPE) do ciclo de vida do Exercício FLINTLOCK 2024", na cidade de Amsterdã, Holanda, no período de 19 a 27 de agosto de 2023, incluindo o trânsito, com ônus total para o Ministério da Defesa:
