@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 22 August, 2023
+ 	 23 August, 2023
 	Designar o servidor IVANILDO ALVES DA SILVA, Matrícula SIAPE n° XX768XX, para exercer a função comissionada de Coordenador de Orçamento e Finanças - COFIN, código FCE 1.10, da Coordenação-Geral de Planejamento, Gestão Estratégica e Orçamento - CGPGO, da Diretoria de Desenvolvimento Institucional - DIDES, do Instituto de Pesquisa Econômica Aplicada - IPEA.
 N° 369 - Dispensar o servidor CARLOS ROBERTO PAIVA DA SILVA, Matrícula SIAPE n° XX469XX, da função comissionada de Coordenador de Orçamento e Finanças - COFIN, código FCE 1.10, da Coordenação-Geral de Planejamento, Gestão Estratégica e Orçamento - CGPGO, da Diretoria de Desenvolvimento Institucional - DIDES, do Instituto de Pesquisa Econômica Aplicada - IPEA.
 Art. 1º DISPENSAR do Cargo (CD-04) de Diretor(a) do Núcleo de Empreendedorismo e Inovação - NEI do Instituto de Inovação, Pesquisa, Empreendedorismo, Internacionalização e Relações Institucionais - IPÊ, o(a) servidor(a) LEONARDO FERRAZ XAVIER, Matrícula SIAPE nº 2199713, do Quadro Único de Pessoal desta Universidade, a partir da data da publicação desta portaria no Diário Oficial da União, conforme Despacho nº 2324/2023-GR-UFRPE, de 15/08/2023, constante no Processo mencionado.
