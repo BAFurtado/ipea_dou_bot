@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 25 August, 2023
+ 	 28 August, 2023
 	Autorizar o afastamento do País do servidor FERNANDO JOSÉ DA SILVA PAIVA RIBEIRO, ocupante do cargo de Técnico de Planejamento e Pesquisa, em exercício na Diretoria de Estudos Internacionais - DINTE, matrícula SIAPE nº XX009XX, do Instituto de Pesquisa Econômica Aplicada - IPEA, para participar do WTO Public Forum e da reunião do Trade and Investment Research Network, em Genebra/Suíça, no período de 9 a 16 de setembro de 2023, incluído trânsito, com ônus para o IPEA.
 Designar o servidor IVANILDO ALVES DA SILVA, Matrícula SIAPE n° XX768XX, para exercer a função comissionada de Coordenador de Orçamento e Finanças - COFIN, código FCE 1.10, da Coordenação-Geral de Planejamento, Gestão Estratégica e Orçamento - CGPGO, da Diretoria de Desenvolvimento Institucional - DIDES, do Instituto de Pesquisa Econômica Aplicada - IPEA.
 N° 369 - Dispensar o servidor CARLOS ROBERTO PAIVA DA SILVA, Matrícula SIAPE n° XX469XX, da função comissionada de Coordenador de Orçamento e Finanças - COFIN, código FCE 1.10, da Coordenação-Geral de Planejamento, Gestão Estratégica e Orçamento - CGPGO, da Diretoria de Desenvolvimento Institucional - DIDES, do Instituto de Pesquisa Econômica Aplicada - IPEA.
