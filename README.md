@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 12 October, 2023
+ 	 13 October, 2023
 	Considerando o art. 33 da Lei n.º 11.947, de 16 de junho 2009, que instituiu o Pronera no âmbito do Ministério do Desenvolvimento Agrário - MDA e executado pelo Instituto Nacional de Colonização e Reforma Agrária - Incra;
 Autorizar o Afastamento do País do servidor Pedro Lucas de Moura Palotti, ocupante do cargo de Especialista em Políticas Públicas e Gestão Governamental, em exercício na Diretoria de Estudos e Políticas do Estado, das Instituições e da Democracia - DIEST, matrícula SIAPE nº **424**, do Instituto de Pesquisa Econômica Aplicada - IPEA, para representar o IPEA, compondo a delegação brasileira que fará parte da missão de estudos sobre federalismo e relações intergovernamentais, a realizar-se na Austrália, em Melbourne, Camberra e Sydney, no período de 09 a 19 de novembro de 2023, incluído trânsito, com ônus para o IPEA.
 Nº 403 - Dispensar, a pedido, o servidor JOAQUIM ALVES BRANDÃO PRIMO, matrícula SIAPE nº XX650XX, da Função Comissionada de Chefe da Divisão de Capacitação - DVCAP, código FCE 1.07, da Coordenação de Capacitação e Desenvolvimento de Pessoas - CODEP, da Coordenação-Geral de Gestão de Pessoas - CGPES, da Diretoria de Desenvolvimento Institucional - DIDES, do Instituto de Pesquisa Econômica Aplicada - IPEA, a contar de 02 de outubro de 2023.
