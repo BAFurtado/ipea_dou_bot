@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 06 November, 2023
+ 	 07 November, 2023
 	Art. 1º Restabelecer, em caráter excepcional e ad referendum do Plenário, o mandato dos membros integrantes (entidades) da 5ª Gestão do Conselho das Cidades e designar, na forma do Anexo desta Resolução, os respectivos representantes para o funcionamento do Conselho das Cidades - ConCidades.
 Art. 1º Designar especificamente para o processo SEI nº 03001.001065/2023-55 o servidor DEVALDE SANTANA DE ASSIS, Matrícula SIAPE nº XX766XX, CPF nº XXX.337.821-XX, como pregoeiro, para conduzir o processo licitatório, na modalidade Pregão Eletrônico.
 Art. 1ºDelegar competência ao servidor FERNANDO GAIGER SILVEIRA, Matrícula SIAPE nº XX832XX, Diretor de Desenvolvimento Institucional do IPEA, para cadastrar, registrar atos e assinar no sistema Transferegov.br a celebração de convênios e contratos de repasse entre órgãos e entidades da administração pública federal, de um lado, e órgãos e entidades dos estados, Distrito Federal e municípios, bem como consórcios públicos e entidades privadas sem fins lucrativos, de outro, para a execução de programas, projetos e atividades de interesse recíproco e em regime de mútua colaboração.
