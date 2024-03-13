@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 12 March, 2024
+ 	 13 March, 2024
 	Autorizar o Afastamento do País do servidor Fábio Veras Soares, matrícula SIAPE nº XX990XX, ocupante do cargo de Técnico de Planejamento e Pesquisa, em exercício na Diretoria de Estudos Internacionais (DINTE), do Instituto de Pesquisa Econômica Aplicada - IPEA, a fim de participar do Encontro de Soluções Globais, realizado pela Fundação da Iniciativa de Soluções Globais - GSI, em Berlim/Alemanha, no período de 04 a 09 de maio de 2024, incluído trânsito, com ônus limitado.
 Designar o servidor ANDRÉ DE MELLO E SOUZA, Matrícula SIAPE nº XX046XX, para exercer a Função Comissionada de Coordenador do Centro Internacional de Políticas para o Desenvolvimento Inclusivo - CIPDI, código FCE 1.10, da Coordenação-Geral de Estudos Internacionais - CGINT, da Diretoria de Estudos Internacionais - DINTE, do Instituto de Pesquisa Econômica Aplicada - IPEA.
 Autorizar o Afastamento do País dos servidores Alexandre dos Santos Cunha e Fábio Veras Soares, ocupantes do cargo de Técnico de Planejamento e Pesquisa, em exercício no Gabinete e na Diretoria de Estudos Internacionais (DINTE), matrículas SIAPE nºs **033** e **990**, respectivamente, do Instituto de Pesquisa Econômica Aplicada - IPEA, a fim de participarem do Encontro de Soluções Globais, realizado pela Fundação da Iniciativa de Soluções Globais - GSI, em Berlim/Alemanha, no período de 04 a 09 de maio de 2024, incluído trânsito, com ônus limitado.
