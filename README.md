@@ -2,8 +2,8 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 25 April, 2024
-	PORTARIA DE PESSOAL UFSM Nº 901, DE 22 DE ABRIL DE 2024
-LUCIANO SCHUCH
-CARLO SCHMIDT, PROFESSOR DO MAGISTÉRIO SUPERIOR do DEPARTAMENTO DE EDUCACAO ESPECIAL, de 25 de maio de 2024 à 02 de junho de 2024, para realizar Afastamento Eventual para viagem a trabalho na instituição Ministério da Educação de Luanda, em Angola/Angola com ônus para Agência Brasileira de Cooperação (Diárias) 27/05/2024 - 31/05/2024; com ônus para Agência Brasileira de Cooperação (Passagens) 26/05/2024 - 31/05/2024; (Processo Nº 23081.052166/2024-30).
-Nº 67 - Designar a servidora SHEILA CRISTINA TOLENTINO BARBOSA, Matrícula SIAPE nº XX009XX, para o encargo de substituta eventual do Chefe de Gabinete, código CCE 1.13, da Presidência, do Instituto de Pesquisa Econômica Aplicada - IPEA, nos afastamentos e impedimentos legais ou regulamentares do titular.
+ 	 30 April, 2024
+	Art. 1º Fica instituída a Banca Examinadora do Concurso Público para avaliação multiprofissional dos candidatos que se declararam com deficiência, em atendimento ao disposto no subite 3.2.1.1 do Edital Retificador n.º 4/IPEA, de 2 de janeiro de 2024.
+Conceder aposentadoria voluntária à servidora ELEM LOPES ALVES, Auxiliar Administrativo, AA-NI-S-IV, do Quadro de Pessoal desta Fundação, matrícula SIAPE nº XX755XX, com fundamento no art. 20, §2º, da Emenda Constitucional nº 103, de 12 de novembro de 2019, declarando em decorrência a vacância do cargo. (Processo n.º 03001.001462/2024-16.
+Conceder aposentadoria voluntária à servidora JEÍZA PEREIRA DE OLIVEIRA, Auxiliar Administrativo, AA-NI-S-IV, do Quadro de Pessoal desta Fundação, matrícula SIAPE nº XX922XX, com fundamento no art. 20, §2º, da Emenda Constitucional nº 103, de 12 de novembro de 2019, declarando em decorrência a vacância do cargo. (Processo n.º 03001.001463/2024-52).
+Conceder aposentadoria voluntária ao servidor DEROCI FONSECA COELHO, Auxiliar Administrativo, AA-NI-S-IV, do Quadro de Pessoal desta Fundação, matrícula SIAPE nº XX921XX, com fundamento no art. 20, §2º, da Emenda Constitucional nº 103, de 12 de novembro de 2019, declarando em decorrência a vacância do cargo. (Processo n.º 03001.001477/2024-76).
