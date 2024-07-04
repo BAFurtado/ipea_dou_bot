@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 03 July, 2024
+ 	 04 July, 2024
 	Dispensar o servidor BERNARDO ABREU DE MEDEIROS, Matrícula SIAPE nº XX340XX, do encargo de substituto eventual do Coordenador-Geral de Estudos e Políticas do Estado, das Instituições e da Democracia - CGEST, código FCE 1.13, da Diretoria de Estudos e Políticas do Estado, das Instituições e da Democracia - DIEST, do Instituto de Pesquisa Econômica Aplicada - IPEA.
 Designar o servidor FLAVIO LYRIO CARNEIRO, Matrícula SIAPE nº XX633XX, para o encargo de substituto eventual do Coordenador-Geral de Estudos e Políticas do Estado, das Instituições e da Democracia - CGEST, código FCE 1.13, da Diretoria de Estudos e Políticas do Estado, das Instituições e da Democracia - DIEST, do Instituto de Pesquisa Econômica Aplicada - IPEA.
 Designar o servidor BERNARDO ABREU DE MEDEIROS, Matrícula SIAPE nº XX340XX, para exercer a Função Comissionada de Coordenador-Geral de Estudos e Políticas do Estado, das Instituições e da Democracia - CGEST, código FCE 1.13, da Diretoria de Estudos e Políticas do Estado, das Instituições e da Democracia - DIEST, do Instituto de Pesquisa Econômica Aplicada - IPEA, ficando dispensado da função que atualmente ocupa.
