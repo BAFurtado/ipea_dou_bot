@@ -2,8 +2,8 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 26 July, 2024
-	PORTARIAS DE 18 DE JULHO DE 2024
+ 	 29 July, 2024
+	Designar a servidora GISELLA GARRITANO DE DEUS, Matrícula SIAPE n° XX402XX, para exercer a Função Comissionada de Ouvidor-Chefe, código FCE 1.10, do Instituto de Pesquisa Econômica Aplicada - IPEA.
+Art. 1º Os Anexos da Portaria MCID nº 75, de 29 de janeiro de 2024, passam a vigorar, respectivamente, na forma dos Anexos I, II, III, IV, V, VI, VII, VIII e IX desta Portaria.
+PORTARIAS DE 18 DE JULHO DE 2024
 Diretora-Executivo no exercício da Presidência
-FLAVIA VINHAES SANTOS
-Declarar vago o cargo efetivo de Tecnologista em Informações Geográficas e Estatísticas, classe C, padrão II, do quadro permanente desta Fundação, por motivo de posse de seu ocupante, GABRIELA FREITAS DA CRUZ, CPF nº XXX.977.196-XX, matrícula nº 2341022, no cargo inacumulável de Técnico de Planejamento e Pesquisa, do (a) Instituto de Pesquisa Econômica Aplicada - IPEA, na forma do disposto no art. 33, inciso VIII, da Lei nº 8.112/90, a partir de 26/07/2024.
