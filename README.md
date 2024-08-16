@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 15 August, 2024
+ 	 16 August, 2024
 	Art. 1º Ceder o servidor ANTONIO XIMENES FEIJÃO, matrícula SIAPE nº 0160412, ocupante do cargo efetivo de Agente Administrativo, do Quadro de Pessoal desta Pasta, para ocupar a Função Comissionada de Coordenador de Administração de Pessoal, código FCE 1.10, na Coordenação-Geral de Gestão de Pessoas da Diretoria de Desenvolvimento Institucional do Instituto de Pesquisa Econômica Aplicada - IPEA.
 N° 140 - Designar o servidor ELSON SANTOS SILVA, Matrícula nº XX389XX, para o encargo de substituto eventual da Coordenadora de Capacitação e Desenvolvimento de Pessoas - CODEP, código FCE 1.10, da Coordenação-Geral de Gestão de Pessoas - CGPES da Diretoria de Desenvolvimento Institucional - DIDES do Instituto de Pesquisa Econômica Aplicada - IPEA.
 MARIA JOSÉ DE SENA
