@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 18 September, 2024
+ 	 19 September, 2024
 	Autorizar o Afastamento do País do servidor André de Mello e Souza, ocupante do cargo de Técnico de Planejamento e Pesquisa, em exercício na Diretoria de Estudos Internacionais (Dinte), matrícula SIAPE n.º **046**, do Instituto de Pesquisa Econômica Aplicada - IPEA, a fim de moderar o evento paralelo da Cúpula do Futuro das Nações Unidas e do Think 20 organizado pelo IPEA, em Nova York/EUA, no período de 18 a 22 de setembro de 2024, incluído trânsito, com ônus.
 A PRESIDENTA DO INSTITUTO DE PESQUISA ECONÔMICA APLICADA - IPEA, no uso de suas atribuições que lhe são conferidas pelo art. 18 do Decreto n.º 11.194, de 08 de setembro de 2022, e competência que lhe foi subdelegada pelo art. 5º da Portaria GM/MPO n.º 26, de 02 de março de 2023; e nos termos do decreto n° 9.991, de 28 de agosto de 2019 e suas alterações, e considerando o que consta dos autos do processo administrativo n.º 03001.002985/2024-71, resolve:
 Autorizar o Afastamento do País do servidor Raimundo da Rocha, ocupante do cargo de Auxiliar Técnico, em exercício no Gabinete, matrícula SIAPE n.º XX651XX, do Instituto de Pesquisa Econômica Aplicada - IPEA, a fim de atender aos Estudos Interdisciplinares de Campo do Curso de Altos Estudos em Defesa de 2024 (CAED24) da Escola Superior de Defesa (ESD), do Ministério da Defesa, em Washington/EUA, no período de 12 a 21 de outubro de 2024, incluído trânsito, com ônus.
