@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 04 October, 2024
+ 	 07 October, 2024
 	Designar o servidor FELIX GARCIA LOPEZ JUNIOR, Matrícula SIAPE nº XX052XX, para exercer a Função Comissionada de Coordenador de Instituições Políticas, Governança e Relações Intergovernamentais - COINS, código FCE 1.10, da Coordenação-Geral de Estudos e Políticas do Estado, das Instituições e da Democracia - CGEST, da Diretoria de Estudos e Políticas do Estado, das Instituições e da Democracia - DIEST, do Instituto de Pesquisa Econômica Aplicada - IPEA.
 N° 206 - Dispensar o servidor FELIX GARCIA LOPEZ JUNIOR, Matrícula SIAPE nº XX052XX, do encargo de substituto eventual do Coordenador de Instituições Políticas, Governança e Relações Intergovernamentais - COINS, código FCE 1.10, da Coordenação-Geral de Estudos e Políticas do Estado, das Instituições e da Democracia - CGEST, da Diretoria de Estudos e Políticas do Estado, das Instituições e da Democracia - DIEST, do Instituto de Pesquisa Econômica Aplicada - IPEA.
 Dispensar, a pedido, a servidora VANESSA GAPRIOTTI NADALIN, Matrícula SIAPE nº XX044XX, da função comissionada de Coordenadora-Geral de Estudos e Políticas Regionais, Urbanas e Ambientais - CGRUR, código FCE 1.13, da Diretoria de Estudos e Políticas Regionais, Urbanas e Ambientais - DIRUR, do Instituto de Pesquisa Econômica Aplicada - IPEA, a contar de 1º de outubro de 2024.
