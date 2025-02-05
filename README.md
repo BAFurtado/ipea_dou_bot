@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 04 February, 2025
+ 	 05 February, 2025
 	Designar o servidor o ROBERTO ROCHA COELHO PIRES, Matrícula SIAPE nº. XX315XX, para, excepcionalmente, em virtude de férias do titular e ausência de substituto, responder pelas atribuições de Diretor de Estudos e Políticas do Estado, das Instituições e da Democracia - DIEST, código CCE 1.15, do Instituto de Pesquisa Econômica Aplicada - Ipea, no período de 10 a 21 de fevereiro 2025 e 24 a 28 de fevereiro de 2025.
 Designar o servidor BERNARDO ALVES FURTADO, Matrícula SIAPE nº XX028XX, para, excepcionalmente, em virtude de férias do titular e do substituto, responder pelas atribuições de Coordenador de Métodos, Dados e Projeções Microeconômicas - COMIC, código FCE 1.10, da Coordenação-Geral de Estudos e Políticas Setoriais, de Inovação, Regulação e Infraestrutura - CGSET, da Diretoria de Estudos e Políticas Setoriais, de Inovação, Regulação e Infraestrutura - DISET, do Instituto de Pesquisa Econômica Aplicada - Ipea, no período de 29 de janeiro a 07 de fevereiro de 2025.
 Designar a servidora JOANA MOSTAFA, Matrícula SIAPE n° XX026XX, para exercer a partir de 01 de fevereiro de 2025, a função comissionada de Coordenadora de Estudos e Pesquisas de Igualdade de Gênero, Raça e Gerações - COGRG, código FCE 1.10, da Coordenação-Geral de Estudos e Políticas Sociais - CGSOC, da Diretoria de Estudos e Políticas Sociais - DISOC, do Instituto de Pesquisa Econômica Aplicada - IPEA.
