@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 25 February, 2025
+ 	 26 February, 2025
 	Art. 1º Instituir a recomposição da Comissão da Produção Orgânica no Estado de Minas Gerais (CPOrg-MG) e designar os seus membros titulares e suplentes no âmbito do setor público e da sociedade civil.
 Dispensar, a pedido, a servidora SANDRA SILVA PAULSEN, Matrícula SIAPE n° XX770XX, da Função Comissionada de Coordenadora de Financiamento Internacional para o Desenvolvimento Sustentável - CFIDS, código FCE 1.10, da Coordenação-Geral de Estudos Internacionais - CGINT, da Diretoria de Estudos Internacionais - DINTE, do Instituto de Pesquisa Econômica Aplicada - IPEA.
 Art. 2º Os efeitos desta Portaria entram em vigor em 24 de janeiro de 2025, data do óbito do servidor.
