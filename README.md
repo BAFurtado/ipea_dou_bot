@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 19 May, 2025
+ 	 20 May, 2025
 	Autorizar o Afastamento do País do servidor João Maria de Oliveira, ocupante do cargo de Técnico de Planejamento e Pesquisa, em exercício na Diretoria de Estudos e Políticas Macroeconômicas (Dimac), matrícula Siape nº XX063XX, do Instituto de Pesquisa Econômica Aplicada - IPEA, a fim de participar do Curso MAgPIE Land Use Modeling Workshop e realizar reuniões de trabalho com o Potsdam Institute for Climate Impact Research (PIK), no período de 14 a 22 de junho de 2025, em Potsdam/Alemanha, incluído trânsito, com ônus.
 Autorizar o Afastamento do País do servidor André de Mello e Souza, ocupante do cargo de Técnico de Planejamento e Pesquisa, em exercício na Diretoria de Estudos Internacionais (Dinte), matrícula Siape nº XX046XX, do Instituto de Pesquisa Econômica Aplicada - IPEA, a fim de participar da Terceira Reunião do Conselho Consultivo Científico Internacional do Instituto Alemão de Desenvolvimento e Sustentabilidade (IDOS) e conduzir a realização do Laboratório "Fortalecendo alianças multilaterais em um mundo polarizado" no contexto da Conferência de Sustentabilidade de Hamburgo, o período de 24 de maio a 04 de junho de 2025, em n Bona e Hamburgo/Alemanha, incluído trânsito, com ônus limitado.
 Art. 1º Ceder a servidora Roberta Peixoto Areas da Silva, matrícula nº 1663791, pertencente ao Quadro de Pessoal da Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - CAPES, para exercício junto ao Instituto de Pesquisa Econômica Aplicada - IPEA.
