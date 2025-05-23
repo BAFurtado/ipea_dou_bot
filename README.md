@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 22 May, 2025
+ 	 23 May, 2025
 	Autorizar o Afastamento do País do servidor Rodrigo Fracalossi de Moraes, ocupante do cargo de Técnico de Planejamento e Pesquisa, em exercício na Diretoria de Estudos Internacionais (Dinte), matrícula Siape nº XX340XX, do Instituto de Pesquisa Econômica Aplicada - IPEA, a fim de participar da Conferência conjunta da International Studies Association e Associação Mexicana de Relações Internacionais: Positioning Latin America and Mexico in International Relations, bem como participar de entrevistas, discussões sobre política externa mexicana e apresentação de estudo comparativo entre política externa do Brasil e do México, no período de 02 a 13 de junho de 2025, em Huatulco e Cidade do México/México, incluído trânsito, com ônus limitado.
 N° 133- Dispensar o servidor PAULO AUGUSTO MEYER MATTOS NASCIMENTO, Matrícula SIAPE nº. XX049XX, do encargo de substituto eventual do Coordenador-Geral de Estudos e Políticas Sociais - CGSOC, código FCE 1.13, da Diretoria de Estudos e Políticas Sociais - DISOC, do Instituto de Pesquisa Econômica Aplicada - IPEA.
 Autorizar o Afastamento do País do servidor Luiz Marcelo Michelon Zardo, ocupante do cargo de Técnico de Planejamento e Pesquisa, em exercício na Diretoria de Estudos Internacionais (Dinte), matrícula Siape nº XX209XX, do Instituto de Pesquisa Econômica Aplicada - IPEA, a fim de participar do Yerevan Dialogue 2025, no período de 23 a 29 de maio de 2025, em Erevã/Armênia, incluído trânsito, com ônus limitado.
