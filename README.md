@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 02 June, 2025
+ 	 03 June, 2025
 	Conceder aposentadoria voluntária ao servidor DEVALDE SANTANA DE ASSIS, Matrícula SIAPE nº XX66XX, ocupante do cargo de Auxiliar de Serviços Gerais, NI-S-IV, do Quadro de Pessoal desta Fundação, com fundamento no art. 10, § 1º, inciso I, da Emenda Constitucional n.º 103, de 12 de novembro de 2019, declarando em decorrência extinção do cargo (Processo n.º 03001.001683/2025-67).
 Designar a servidora GRAZIELA FERRERO ZUCOLOTO, Matrícula SIAPE nº XX412XX, para exercer a Função Comissionada de Coordenadora-Geral de Estudo e Políticas Setoriais, de Inovação, Regulação e Infraestrutura - CGSET, código FCE 1.13, da Diretoria de Estudo e Políticas Setoriais, de Inovação, Regulação e Infraestrutura - DISET do Instituto de Pesquisa Econômica Aplicada - IPEA.
 N° 143 - Dispensar a servidora GRAZIELA FERRERO ZUCOLOTO, Matrícula SIAPE nº XX412XX, do encargo de substituta eventual do Coordenador-Geral de Estudo e Políticas Setoriais, de Inovação, Regulação e Infraestrutura - CGSET, código FCE 1.13, da Diretoria de Estudo e Políticas Setoriais, de Inovação, Regulação e Infraestrutura - DISET do Instituto de Pesquisa Econômica Aplicada - IPEA.
