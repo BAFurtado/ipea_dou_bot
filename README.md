@@ -2,8 +2,8 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 13 June, 2025
-	Nº 718 -NOMEAR
-O MINISTRO DE ESTADO DA CASA CIVIL DA PRESIDÊNCIA DA REPÚBLICA, no uso de suas atribuições e tendo em vista o disposto no art. 4º do Decreto nº 9.794, de 14 de maio de 2019, resolve:
-Art. 2º Os candidatos nomeados ficam convocados neste ato para apresentarem os documentos e exames médicos relacionados, respectivamente, nos Anexos II e III desta Portaria até 5 (cinco) dias antes da posse.
-Art. 1º Nomear para o cargo efetivo de Técnico de Planejamento e Pesquisa os candidatos aprovados e classificados no referido concurso público, relacionados no Anexo I desta Portaria.
+ 	 16 June, 2025
+	Art. 2º Os efeitos desta Portaria entram em vigor em 23 de maio de 2025, data do óbito.
+Art. 1º Conceder pensão a SÔNIA REGINA PALERMO HASSELMANN, na qualidade de cônjuge do ex-servidor Edgard Frederico Hasselmann, ocupante do cargo Técnico de Planejamento e Pesquisa, matrícula SIAPE n° XX19XX, do quadro de pessoal deste Instituto de Pesquisa Econômica Aplicada, falecido na inatividade, em 23 de maio de 2025, com fundamento no inciso I do art. 3º da Portaria SGP/SEDGG/ME Nº 4645, de 24 de maio de 2022, c/c o art. 217 da Lei nº 8.112, de 11 de dezembro de 1990, e art. 23 da Emenda Constitucional nº 103, de 12 de novembro de 2019.
+Art. 2º Os efeitos desta Portaria entram em vigor em 28 de maio de 2025, data do óbito.
+Art. 1º Conceder pensão a MARTA MARIA SAMPAIO LEITE, na qualidade de companheira do ex-servidor Clayd da Silva Nunes, ocupante do cargo Analista de Sistemas, matrícula SIAPE n° XX35XX, do quadro de pessoal deste Instituto de Pesquisa Econômica Aplicada, falecido na inatividade, em 28 de maio de 2025, com fundamento no inciso I do art. 3º da Portaria SGP/SEDGG/ME Nº 4645, de 24 de maio de 2022, c/c o art. 217 da Lei nº 8.112, de 11 de dezembro de 1990, e art. 23 da Emenda Constitucional nº 103, de 12 de novembro de 2019.
