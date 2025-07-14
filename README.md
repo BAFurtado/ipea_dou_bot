@@ -2,8 +2,8 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 11 July, 2025
-	Nº 171 - Designar o servidor FELIPE VELLA PATEO, Matrícula SIAPE nº. XX436XX, para o encargo de substituto eventual do Coordenador de Trabalho e Desenvolvimento Rural - COTRA, código FCE 1.10, da Coordenação-Geral de Estudos e Políticas Sociais - CGSOC, da Diretoria de Estudos e Políticas Sociais - DISOC, do Instituto de Pesquisa Econômica Aplicada - Ipea, nos afastamentos e impedimentos legais ou regulamentares do titular.
-Nº 170 - Dispensar o servidor MÁRIO MAGALHÃES, Matrícula SIAPE nº. XX059XX, do encargo de substituto eventual do Coordenador de Trabalho e Desenvolvimento Rural - COTRA , código FCE 1.10, da Coordenação-Geral de Estudos e Políticas Sociais - CGSOC, da Diretoria de Estudos e Políticas Sociais - DISOC, do Instituto de Pesquisa Econômica Aplicada - Ipea.
-Designar o servidor ALEXANDRE MAGNO DE VASCONCELOS MENDES, Matrícula SIAPE nº. XX765XX, para o encargo de substituto eventual do Chefe da Divisão de Pagamento -DVPAG, código FCE 1.07, da Coordenação de Administração de Pessoal - COADP, da Coordenação-Geral de Gestão de Pessoas - CGPES, da Diretoria de Desenvolvimento Institucional - DIDES, do Instituto de Pesquisa Econômica Aplicada - Ipea, nos afastamentos e impedimentos legais ou regulamentares do titular.
-Art. 1º DESIGNAR para exercer a Função (FG-03) de Coordenador(a) de Celebração de Parcerias - CELPA.NURI do Instituto de Inovação, Parcerias, Empreendedorismo e Internacionalização - IPÊ, o(a) servidor(a) LIVIA BENEVIDES XAVIER CORREIA, do Quadro Único de Pessoal desta Universidade, Matrícula SIAPE nº 3144749, a partir de 03/07/2025, conforme Despacho nº 38132/2025-REITORIA-UFRPE, de 04/07/2025, constante no Processo mencionado.
+ 	 14 July, 2025
+	Autorizar o Afastamento do País do servidor FÁBIO VÉRAS SOARES, ocupante do cargo de Técnico de Planejamento e Pesquisa, em exercício na Diretoria de Estudos Internacionais (Dinte), matrícula SIAPE nº XX990XX, do Instituto de Pesquisa Econômica Aplicada - IPEA, a fim de participar de reuniões do Grupo de Trabalho do Desenvolvimento e de Ministros do Desenvolvimento, no período de 18 a 27 de julho de 2025, em Mpumalanga/África do Sul, incluído trânsito, com ônus limitado..
+MAURO GIACOBBO, para exercer o cargo de Chefe da Assessoria Especial de Gestão Estratégica da Secretaria-Geral do Ministério da Defesa, código CCE 1.15.
+Nº 854 -NOMEAR
+O MINISTRO DE ESTADO DA CASA CIVIL DA PRESIDÊNCIA DA REPÚBLICA, no uso de suas atribuições e tendo em vista o disposto no art. 4º do Decreto nº 9.794, de 14 de maio de 2019, resolve:
