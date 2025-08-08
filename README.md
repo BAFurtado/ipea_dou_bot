@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 07 August, 2025
+ 	 08 August, 2025
 	Art. 1º Conceder Aposentadoria Voluntária por Tempo Integral de Contribuição, com fundamento no art. 3º da E.C. nº 47, de 2005, c/c o caput do art. 3º da E.C. nº 103/2019. A aposentadoria será concedida com proventos correspondentes à última remuneração (integralidade) e com reajustes atrelados ao pessoal da ativa (paridade), na forma do art. 7º da E.C. nº 41, de 2003, a partir da data de publicação do ato concessório no Diário Oficial da União - DOU. Seguem informações do(a) servidor(a) em tela:
 Designar o servidor MARCO AURÉLIO ALVES DE MENDONÇA, Matrícula SIAPE nº. XX109XX, para o encargo de substituto eventual do Coordenador de Relações Econômicas Externas - COREX, código FCE 1.10, da Coordenação-Geral de Estudos Internacionais - CGINT, da Diretoria de Estudos Internacionais - DINTE do Ipea, nos afastamentos e impedimentos legais ou regulamentares do titular.
 Designar o servidor SÉRGIO PAZ MAGALHÃES, Matrícula SIAPE nº XX108XX, para exercer a Função Comissionada de Coordenador de Capacitação e Desenvolvimento de Pessoas - CODEP, código FCE 1.10, da Coordenação-Geral de Gestão de Pessoas - CGPES, da Diretoria de Desenvolvimento Institucional - DIDES, do Instituto de Pesquisa Econômica Aplicada - Ipea.
