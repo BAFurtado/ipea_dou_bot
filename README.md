@@ -2,8 +2,8 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 21 August, 2025
-	Art. 2º Os efeitos desta Portaria entram em vigor em 10 de agosto de 2025, data do óbito.
-Art. 1º Conceder pensão a MARIA DE LOURDES DOS SANTOS NICOLAU, na qualidade de cônjuge do servidor aposentado João Nicolau Neto, ocupante do cargo Motorista, matrícula Siape nº XX768XX, do quadro de pessoal deste Instituto de Pesquisa Econômica Aplicada, falecido na inatividade, em 10 de agosto de 2025, com fundamento no inciso I do art. 3º da Portaria SGP/SEDGG/ME Nº 4645, de 24 de maio de 2022, c/c o art. 217 da Lei nº 8.112, de 11 de dezembro de 1990, e art. 23 da Emenda Constitucional nº 103, de 13 de novembro de 2019.
+ 	 25 August, 2025
+	Autorizar o Afastamento do País do servidor Fábio Véras Soares, ocupante do cargo de Técnico de Planejamento e Pesquisa, em exercício na Diretoria de Estudos Internacionais (Dinte), matrícula Siape nº *990*, do Instituto de Pesquisa Econômica Aplicada - IPEA, a fim de participar da reunião de trabalho do programa Avanzar2030, promovido pelo IFPRI (Internacional Food Policy Research Institute), no período de 27 a 30 de agosto de 2025, em Bogotá/Colômbia, incluído trânsito, com ônus limitado.
+Nº 203 - Designar o servidor PEDRO CARVALHO DE MIRANDA, Matrícula SIAPE n.º XX361XX, para o encargo de substituto eventual da Presidenta, código CCE 1.17, do Instituto de Pesquisa Econômica Aplicada - IPEA, nos afastamentos e impedimentos legais da titular.
+Nº 202 - Dispensar o servidor CLAUDIO ROBERTO AMITRANO, Matrícula SIAPE n.º XX054XX, do encargo de substituto eventual da Presidenta, código CCE 1.17, do Instituto de Pesquisa Econômica Aplicada - IPEA.
 Art. 2º Os efeitos desta Portaria entram em vigor em 10 de agosto de 2025, data do óbito.
-Art. Conceder pensão a MARIA DE LOURDES DOS SANTOS NICOLAU, na qualidade de cônjuge do servidor aposentado João Nicolau Neto, ocupante do cargo Motorista, matrícula Siape nº XX768XX, do quadro de pessoal deste Instituto de Pesquisa Econômica Aplicada, falecido na inatividade, em 10 de agosto de 2025, com fundamento no inciso I do art. 3º da Portaria SGP/SEDGG/ME Nº 4645, de 24 de maio de 2022, c/c o art. 217 da Lei nº 8.112, de 11 de dezembro de 1990, e art. 23 da Emenda Constitucional nº 103, de 13 de novembro de 2019.
