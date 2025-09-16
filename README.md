@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 15 September, 2025
+ 	 16 September, 2025
 	Designar a servidora RUTE IMANISHI RODRIGUES, Matrícula SIAPE nº XX219XX, para exercer a função comissionada de Coordenadora de Desenvolvimento Urbano - CODUR, código FCE 1.10, da Coordenação-Geral de Estudos e Políticas Regionais, Urbanas e Ambientais - CGRUR, da Diretoria de Estudos e Políticas Regionais, Urbanas e Ambientais - DIRUR, do Instituto de Pesquisa Econômica Aplicada - Ipea.
 N° 224 - Dispensar a servidora RUTE IMANISHI RODRIGUES, Matrícula SIAPE nº XX219XX, do encargo de substituta eventual da Coordenadora de Desenvolvimento Urbano - CODUR, código FCE 1.10, da Coordenação-Geral de Estudos e Políticas Regionais, Urbanas e Ambientais - CGRUR, da Diretoria de Estudos e Políticas Regionais, Urbanas e Ambientais - DIRUR, do Instituto de Pesquisa Econômica Aplicada - Ipea.
 Autorizar o Afastamento do País do servidor Luiz Marcelo Michelon Zardo, ocupante do cargo de Técnico de Planejamento e Pesquisa, em exercício na Diretoria de Estudos Internacionais (DINTE), matrícula SIAPE nº XX209XX, do Instituto de Pesquisa Econômica Aplicada - IPEA, a fim de participar do "III Fórum Internacional Integração e Solidariedade Regional", no período de 8 a 10 de setembro de 2025, em Montevidéu/Uruguai, incluído trânsito, com ônus limitado.
