@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 30 September, 2025
+ 	 01 October, 2025
 	Nº 243 - Designar o servidor FRANCISCO EDUARDO DE LUNA E ALMEIDA SANTOS, Matrícula SIAPE nº. XX591XX, para o encargo de substituto eventual do Coordenador de Comércio Internacional - COECI, código FCE 1.10, da Coordenação-Geral de Estudos Internacionais - CGINT, da Diretoria de Estudos Internacionais - DINTE, do Instituto de Pesquisa Econômica Aplicada - Ipea.
 Nº 242 - Dispensar o servidor MARCELO JOSÉ BRAGA NONNENBERG, Matrícula SIAPE nº. XX768XX, do encargo de substituto eventual do Coordenador de Comércio Internacional - COECI, código FCE 1.10, da Coordenação-Geral de Estudos Internacionais - CGINT, da Diretoria de Estudos Internacionais - DINTE, do Instituto de Pesquisa Econômica Aplicada - Ipea.
 Autorizar o Afastamento do País do servidor Ronaldo Ramos Vasconcelos, ocupante do cargo de Técnico de Planejamento e Pesquisa, em exercício na Diretoria de Estudos e Políticas Regionais, Urbanas e Ambientais(Dirur), matrícula Siape nº XX771XX, do Instituto de Pesquisa Econômica Aplicada - IPEA, a fim de participar como palestrante na "Conferencista Internacional - Encontro Região Pacífico, Colômbia", no período de 6 a 11 de outubro de 2025, em Bogotá, Colômbia, incluído trânsito, com ônus limitado.
