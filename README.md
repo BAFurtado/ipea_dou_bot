@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 16 October, 2025
+ 	 17 October, 2025
 	Declarar a vacância do cargo de Técnico de Planejamento e Pesquisa, ocupado pela servidora LILIANE PESSOA SILVA, matrícula SIAPE nº XX202XX, a partir de 08 de outubro de 2025, por motivo de posse em outro cargo inacumulável, com fundamento no art. 33, inciso VIII, da Lei n º 8.112/90.
 Art. 1º Designar os servidores Dóris Magda Tavares Guerra, Auxiliar Técnico, matrícula SIAPE n.º XX767XX, e JHONATHAN DIVINO FERREIRA DOS SANTOS, Técnico de Desenvolvimento e Administração, matrícula SIAPE n.º XX998XX, para constituírem Comissão de Processo Administrativo Disciplinar sob o rito sumário, visando à apuração de possível abandono de cargo por parte do servidor José Luiz Rossi Júnior, Técnico de Planejamento e Pesquisa, matrícula SIAPE XX820XX, em vista da ausência ininterrupta ao serviço no período de 1/5/2025 a 31/5/2025, conforme consta do Processo Administrativo n.º 03012.000324/2003-58.
 Autorizar o Afastamento do País do servidor Claudio Roberto Amitrano, ocupante do cargo de Técnico de Planejamento e Pesquisa, Diretor da Dimac, matrícula SIAPE nº XX054XX, do Instituto de Pesquisa Econômica Aplicada - IPEA, a fim de participar da 16ª Sessão da Conferência das Nações Unidas sobre Comércio e Desenvolvimento (UNCTAD 16), e em reuniões de trabalho com representantes da Unctad, no período de 17 a 26 de outubro de 2025, em Genebra/Suíça, incluído trânsito, com ônus.
