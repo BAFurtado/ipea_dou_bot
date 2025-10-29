@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 28 October, 2025
+ 	 29 October, 2025
 	Autorizar o Afastamento do País da servidora Sheila Cristina Tolentino Barbosa, ocupante do cargo de Especialista em Políticas Públicas e Gestão Governamental - EPPGG., matrícula SIAPE nº XX009XX, do Instituto de Pesquisa Econômica Aplicada - IPEA, a fim de participar da Cúpula Think20 de 2025, no período de 11 a 15 de novembro de 2025, em Johannesburg/África do Sul, incluído trânsito, com ônus.
 Tornar sem efeito a Portaria IPEA nº 241, de 23 de setembro de 2025, publicada no Diário Oficial da União de 26 de setembro de 2025, seção 2, página 44, que trata da autorização do afastamento do País do servidor Ronaldo Ramos Vasconcelos.
 Autorizar o Afastamento do País do servidor Fábio Véras Soares, ocupante do cargo de Técnico de Planejamento e Pesquisa, matrícula SIAPE nº X990X, em exercício na Diretoria de Estudos Internacionais (Dinte) do Instituto de Pesquisa Econômica Aplicada - IPEA, a fim de participar da Consulta Regional Asia-Pacífico a convite do UNDESA (Departamento de Assuntos Econômicos e Sociais das Nações Unidas), com objetivo de reunir evidências e lições aprendidas sobre os desafios para alcançar os Objetivos de Desenvolvimento Sustentável (ODS) na região, no período de 02 a 07 de novembro de 2025, em Incheon/Coréia do Sul, incluído trânsito, com ônus limitado.
