@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 07 January, 2026
+ 	 08 January, 2026
 	Autorizar o Afastamento do País do servidor Fábio Véras Soares, ocupante do cargo de Técnico de Planejamento e Pesquisa, matrícula SIAPE nº XX990XX, em exercício na Diretoria de Estudos Internacionais (Dinte) do Instituto de Pesquisa Econômica Aplicada - IPEA, a fim de participar do Workshop sobre Proteção Social na Pesca e na Aquicultura a convite da Organização das Nações Unidas para a Alimentação e a Agricultura (FAO), com objetivo de facilitar a troca de conhecimentos e o diálogo sobre o desenho e a implementação de programas inclusivos de proteção social de pescadores e de comunidades dependentes da aquicultura, em especial aquelas em situação de vulnerabilidade, no período de 18 a 22 de janeiro de 2026, em Praia, Cabo Verde, incluído trânsito, com ônus limitado.
 Art. 1º Designar os seguintes membros para compor o Grupo de Trabalho de Monitoramento de Indicadores do Observatório Brasil da Igualdade de Gênero, instituído no âmbito do Ministério das Mulheres, por meio da Portaria n° 119, de 26 de setembro de 2012:
 Designar o servidor BERNARDO ALVES FURTADO, Matrícula SIAPE nº XX028XX, para, excepcionalmente, em virtude de férias do titular e do substituto, responder pelas atribuições de Coordenador de Métodos, Dados e Projeções Microeconômicas - COMIC, código FCE 1.10, da Coordenação-Geral de Estudos e Políticas Setoriais, de Inovação, Regulação e Infraestrutura - CGSET, da Diretoria de Estudos e Políticas Setoriais, de Inovação, Regulação e Infraestrutura - DISET, do Instituto de Pesquisa Econômica Aplicada - Ipea, no período de 05 a 11 de janeiro de 2026.
