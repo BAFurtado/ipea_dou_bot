@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 11 February, 2026
+ 	 12 February, 2026
 	Designar a servidora ANNA CAROLINA MENDONÇA LEMOS RIBEIRO, Matrícula SIAPE nº XX451XX, para exercer a função comissionada de Chefe da Assessoria Executiva - ASEXC, código FCE 1.10, da Presidência do Instituto de Pesquisa Econômica Aplicada - IPEA, ficando exonerada do cargo comissionado que atualmente ocupa.
 Designar o servidor RICARDO SAMPAIO DA SILVA FONSECA, Matrícula SIAPE nº. XX648XX, para o encargo de substituto eventual do Coordenador de Infraestrutura Econômica e Regulação - COINF, código FCE 1.10, da Coordenação-Geral de Estudos e Políticas Setoriais, de Inovação, Regulação e Infraestrutura - CGSET, da Diretoria de Estudos e Políticas Setoriais, de Inovação, Regulação e Infraestrutura - DISET, do Instituto de Pesquisa Econômica Aplicada - IPEA, nos afastamentos e impedimentos legais ou regulamentares do titular.
 Declarar a vacância do cargo de Técnico de Planejamento e Pesquisa, ocupado pelo servidor FLÁVIO AUGUSTO ARANTES ANDRADE HANSEN MARTINS, matrícula SIAPE nº XX209XX, a partir de 02 de fevereiro de 2026, por motivo de posse em outro cargo inacumulável, com fundamento no art. 33, inciso VIII, da Lei n º 8.112/90.
