@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 23 February, 2026
+ 	 25 February, 2026
 	Conceder aposentadoria voluntária à servidora DALVA SILVA DE AGUIAR, ocupante do cargo de Secretaria, Nível Intermediário, Classe "S", Padrão IV, matrícula SIAPE n.º XX766XX, com fundamento no art. 10, § 1º, Inciso I, da Emenda Constitucional nº 103, de 12 de novembro de 2019, declarando em decorrência a extinção do cargo (processo n.º 03001.000360/2026-37).
 Autorizar o Afastamento do País do servidor RAFAEL HENRIQUE MORAES PEREIRA, ocupante do cargo de Técnico de Planejamento e Pesquisa, matrícula SIAPE nº XX017XX, em exercício na Coordenação-Geral de Ciência de Dados e Tecnologia da Informação - CGDTI do Instituto de Pesquisa Econômica Aplicada - IPEA, para participar como palestrante na Conferência sobre Mobilidade Urbana e Mudanças Climáticas da Universidade de Harvard e na Sessão Paralela no Transforming Transportation 2026, no período de 01 a 13 de março de 2026, em Washington/EUA, incluído trânsito, com ônus limitado.
 Autorizar o Afastamento do País dos servidores Claudia Regina Baddini Curralero e Walter Antonio Desidera Neto, ocupante do cargo de Especialista em Políticas Públicas e Gestão Governamental (EPPGG) e Técnico de Planejamento e Pesquisa, respectivamente, matrículas SIAPE nº XX421XX e XX157XX, em exercício na Diretora de Estudos Internacionais (Dinte) do Instituto de Pesquisa Econômica Aplicada - IPEA, a fim de participarem do Raisina Dialogue e do evento paralelo do BRICS voltado à cooperação econômica e à governança global, no período de 03 a 09 de março de 2026, em Nova Delhi/Índia, incluído trânsito, com ônus limitado.
