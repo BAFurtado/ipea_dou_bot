@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 03 June, 2026
+ 	 05 June, 2026
 	Tornar sem efeito a Portaria IPEA nº 35, de 13 de fevereiro de 2026, publicada no D.O.U. de 19 de fevereiro de 2026, Seção 2, Página 28, que trata da designação da servidora LETICIA BARTHOLO DE OLIVEIRA E SILVA para excepcionalmente, em virtude de Férias da titular e Afastamento do País do substituto, responder pelas atribuições de Presidente, código CCE 1.17, do Ipea, no período de 26 a 27 de fevereiro de 2026.
 Art. 1º DESIGNAR para exercer o Cargo (CD-03) de Diretor(a) do(a) Instituto de Inovação, Parcerias, Empreendedorismo e Internacionalização - IPÊ, o(a) servidor(a) EDIVAN RODRIGUES DE SOUZA, do Quadro Único de Pessoal desta IFES, Matrícula SIAPE nº 2612852, a partir da data da publicação desta portaria no Diário Oficial da União (DOU), conforme Despacho nº 29731/2026-DAP-PROGEPE, de 02/06/2026, constante no Processo mencionado.
 Art. 1º Ceder o servidor LUIS CLAUDIO KUBOTA, Matrícula SIAPE nº XX597XX, ocupante do cargo de Técnico de Planejamento e Pesquisa, pertencente ao Quadro de Pessoal da Fundação Instituto de Pesquisa Econômica Aplicada - IPEA, para exercer o cargo comissionado de Coordenador, código CCT V, da Coordenação de Inovação da Gerência de Sustentabilidade e Inovação da Superintendência de Sustentabilidade, Pessoas e Inovação da Agência Nacional de Transporte Terrestre - ANTT.
