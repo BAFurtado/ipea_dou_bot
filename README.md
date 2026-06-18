@@ -1,9 +1,20 @@
- ### Ipea DOU bot data
- This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
- 
-                        Very last change: 
- 	 18 June, 2026
-	Autorizar o Afastamento do País do servidor ALEXANDRE MARINHO, matrícula Siape nº XX820XX, ocupante do cargo de Técnico de Planejamento e Pesquisa, em exercício na Diretoria de Estudos e Políticas Sociais - DISOC do Instituto de Pesquisa Econômica Aplicada - IPEA, a fim de participar do evento "24ª Conferência da Federação Internacional de Sociedades de Pesquisa Operacional (IFORS)", no período de 12 a 17 de Julho de 2026, em Viena/Áustria, incluído trânsito, com ônus.
-Designar o servidor FERNANDO JOSÉ DA SILVA PAIVA RIBEIRO, Matrícula SIAPE nº XX009XX, para, excepcionalmente, em virtude de afastamento do País da titular e férias da substituta, responder pelas atribuições de Diretor de Estudos Internacionais - DINTE, código CCE 1.15, do Instituto de Pesquisa Econômica Aplicada - IPEA, no período de 01 a 05 de julho de 2026.
-Art. 1º Ficam designadas como pessoas representantes do Comitê de Acompanhamento e Avaliação das Reservas de Vagas no Serviço Público Federal:
-Autorizar o Afastamento do País da servidora KEITI DA ROCHA GOMES, matrícula Siape nº XX929XX, ocupante do cargo de Auditora Federal de Finanças e Controle/STN e Diretora de Estudos Internacionais - DINTE do Instituto de Pesquisa Econômica Aplicada - IPEA, a fim de participar da 17ª Conferência Anual, à convite do Comitê de Reinvenção Bretton Woods, do Banco Central do Perú e do Banco de Desenvolvimento Inter-Americano, cujo tema será "O Grande Realinhamento: Estabilidade Monetária, Desequilíbrio Global, e a Geoeconomia dos Minerais Críticos", no período de 01 a 05 de julho de 2026, em Cidade de Cusco/Perú, incluído trânsito, com ônus limitado.
+## DOU Career Radar — 18/06/2026
+
+### IPEA
+
+- **Keiti Da Rocha Gomes** — afastamento, Diretora [>>](https://www.in.gov.br/web/dou/-/portaria-ipea-n-125-de-17-de-junho-de-2026-713025347)
+- PORTARIA MGI Nº 4.965, DE 17 DE JUNHO DE 2026 [>>](https://www.in.gov.br/web/dou/-/portaria-mgi-n-4.965-de-17-de-junho-de-2026-713004137)
+- **Fernando José Da Silva Paiva Ribeiro** — designação, CCE 1.15 [>>](https://www.in.gov.br/web/dou/-/portaria-ipea-n-127-de-17-de-junho-de-2026-713001979)
+- **Alexandre Marinho** — afastamento, Diretor [>>](https://www.in.gov.br/web/dou/-/portaria-ipea-n-126-de-17-de-junho-de-2026-712981295)
+
+### Radar
+
+| Sc | Type | Organ | Position | Keywords | |
+|---:|------|-------|----------|----------|----|
+| 6 | VAC | Instituto Chico Mendes de Conservação da Biodiversidade |  |  | [>>](https://www.in.gov.br/web/dou/-/portaria-icmbio-n-2.791-de-15-de-junho-de-2026-713026894) |
+| 6 | VAC | Secretaria Executiva |  |  | [>>](https://www.in.gov.br/web/dou/-/portaria-n-239-de-17-de-junho-de-2026-713022586) |
+| 6 | VAC | Casa Civil |  |  | [>>](https://www.in.gov.br/web/dou/-/portarias-de-17-de-junho-de-2026-713017158) |
+
+*VAC: 5 | OPP: 0 | MOV: 0 | IPEA: 4*
+
+*Score: +3 organ/vacancy, +2 opportunity/position, +1 movement. Keywords: +3 core, +2 domain, +1 context*
