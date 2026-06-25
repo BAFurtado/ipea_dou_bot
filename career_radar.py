@@ -44,12 +44,22 @@ VACANCY_QUERIES = [
     {'query': '"inteligência+artificial"', 'secao': 2, 'label': 'IA'},
 ]
 
-# Opportunity signals: selection processes in relevant areas
+# Opportunity signals: selection processes, editais, chamamentos
 OPPORTUNITY_QUERIES = [
-    {'query': '"processo+seletivo"+"ciência+de+dados"', 'secao': 3, 'label': 'Seleção Data Science'},
-    {'query': '"processo+seletivo"+"políticas+públicas"', 'secao': 3, 'label': 'Seleção Pol. Públicas'},
+    # Formal selection processes — topic-targeted
     {'query': '"processo+seletivo"+"modelagem"', 'secao': 3, 'label': 'Seleção Modelagem'},
+    {'query': '"processo+seletivo"+"avaliação"', 'secao': 3, 'label': 'Seleção Avaliação'},
+    {'query': '"processo+seletivo"+"simulação"', 'secao': 3, 'label': 'Seleção Simulação'},
+    {'query': '"processo+seletivo"+"cenários"', 'secao': 3, 'label': 'Seleção Cenários'},
+    {'query': '"processo+seletivo"+"políticas+públicas"', 'secao': 3, 'label': 'Seleção Pol. Públicas'},
     {'query': '"processo+seletivo"+"pesquisa+aplicada"', 'secao': 3, 'label': 'Seleção Pesquisa'},
+    {'query': '"processo+seletivo"+"ciência+de+dados"', 'secao': 3, 'label': 'Seleção Data Science'},
+    # Broader signals — editais, chamamentos
+    {'query': '"edital+de+seleção"+"coordenador"', 'secao': 3, 'label': 'Edital Coordenador'},
+    {'query': '"edital+de+seleção"+"diretor"', 'secao': 3, 'label': 'Edital Diretor'},
+    {'query': '"seleção+simplificada"+CCE', 'secao': 3, 'label': 'Seleção CCE'},
+    {'query': '"seleção+simplificada"+DAS', 'secao': 3, 'label': 'Seleção DAS'},
+    {'query': '"chamada+pública"+"políticas+públicas"', 'secao': 3, 'label': 'Chamada Pol. Públicas'},
 ]
 
 # Organs to EXCLUDE — not relevant for career search
@@ -97,6 +107,9 @@ TARGET_ORGANS = [
     'ministério da saúde',
     'ministério da previdência',
     'ministério da educação',
+    'ministério dos transportes',
+    'ministério da integração',
+    'ministério do turismo',
     'secretaria especial',
     'secretaria executiva',
     'secretaria nacional',
@@ -126,22 +139,27 @@ LOW_POSITIONS = [
 ]
 
 # Keywords weighted by how closely they match the user's actual expertise.
-# Tier 1 (+3): core — these ARE the skillset, rare in government
+# Tier 1 (+3): core — modeling/evaluation applied to policy, the actual draw
 EXPERTISE_TIER1 = [
-    'modelagem', 'simulação', 'ciência de dados', 'sistemas complexos',
-    'agentes', 'agent-based', 'econometria', 'contrafactual',
-    'geoprocessamento',
+    'modelagem', 'simulação', 'cenários', 'avaliação ex-ante',
+    'avaliação de impacto', 'contrafactual', 'sistemas complexos',
+    'agentes', 'agent-based', 'econometria espacial',
+    'evidências', 'política baseada em evidências',
 ]
-# Tier 2 (+2): strong fit — domain areas where expertise applies directly
+# Tier 2 (+2): domain areas where modeling expertise applies directly
 EXPERTISE_TIER2 = [
     'urbano', 'urbana', 'habitação', 'habitacional', 'metropolitano',
-    'metrópoles', 'espacial', 'infraestrutura', 'evidências',
-    'avaliação ex-ante', 'transição energética',
+    'metrópoles', 'espacial', 'infraestrutura',
+    'avaliação de políticas', 'monitoramento e avaliação',
+    'planejamento estratégico', 'transição energética',
+    'desenvolvimento sustentável',
 ]
-# Tier 3 (+1): contextual — relevant but generic, only meaningful combined
+# Tier 3 (+1): supporting skills — relevant but not the core draw
 EXPERTISE_TIER3 = [
+    'ciência de dados', 'inteligência artificial',
+    'geoprocessamento', 'pesquisa aplicada',
     'desenvolvimento regional', 'políticas públicas',
-    'pesquisa aplicada', 'meio ambiente',
+    'meio ambiente',
 ]
 
 
@@ -501,6 +519,14 @@ def generate_digest(ipea_results, radar_results):
             lines.append(f'| {score} | {rtype} | {organ} | {pos} | {kw} | {link} |')
         lines.append('')
 
+    # --- Weekly SIGEPE reminder (Fridays only) ---
+    if datetime.date.today().weekday() == 4:
+        lines.append('---')
+        lines.append('**Checagem semanal:** '
+                     '[SIGEPE Oportunidades](https://oportunidades.sigepe.gov.br) '
+                     '— filtrar por coordenador-geral / diretor / CCE ≥ 1.13')
+        lines.append('')
+
     # --- Footer ---
     n_vac = sum(1 for r in radar_results if r['type'] == 'VAC')
     n_opp = sum(1 for r in radar_results if r['type'] == 'OPP')
@@ -512,6 +538,72 @@ def generate_digest(ipea_results, radar_results):
                  '+1 movement. Keywords: +3 core, +2 domain, +1 context*')
 
     return '\n'.join(lines)
+
+
+def scrape_enap_vagas():
+    """Scrape ENAP /vagas/ for open selection processes only."""
+    url = 'https://enap.gov.br/vagas/'
+    try:
+        from bs4 import BeautifulSoup
+        r = requests.get(url, headers=HEADERS, timeout=30)
+        r.raise_for_status()
+        soup = BeautifulSoup(r.text, 'html.parser')
+    except Exception as e:
+        print(f'  ENAP fetch failed: {e}')
+        return []
+
+    results = []
+    today = datetime.date.today().strftime('%d/%m/%Y')
+
+    in_open_section = False
+    for tag in soup.find_all(['h2', 'h3']):
+        if tag.name == 'h2':
+            text = tag.get_text(strip=True).lower()
+            if 'andamento' in text:
+                in_open_section = True
+            elif 'encerrad' in text:
+                break
+            continue
+
+        if not in_open_section or tag.name != 'h3':
+            continue
+
+        title = tag.get_text(strip=True)
+        if not title:
+            continue
+
+        link_tag = tag.find_parent().find('a', href=True) if tag.find_parent() else None
+        if not link_tag:
+            link_tag = tag.find_next('a', href=True)
+        href = link_tag['href'] if link_tag else ''
+        if not href:
+            continue
+        if not href.startswith('http'):
+            href = f'https://enap.gov.br{href}'
+
+        classification = classify_result({
+            'title': title, 'content': title,
+            'hierarchyList': ['ENAP'],
+        })
+        if classification['type'] == 'skip':
+            classification['type'] = 'OPP'
+            classification['relevance'] = 2
+
+        results.append({
+            'date': today,
+            'title': title,
+            'organ': 'ENAP',
+            'url': href,
+            'content_preview': title,
+            'query_label': 'ENAP Vagas',
+            'type': classification['type'],
+            'relevance': classification['relevance'],
+            'position_level': classification['position_level'],
+            'target_organ': True,
+            'expertise_match': '|'.join(classification.get('expertise_match', [])),
+        })
+
+    return results
 
 
 def main():
@@ -531,16 +623,21 @@ def main():
             if full:
                 r['content_preview'] = full[:2000]
 
-    # 2. Vacancy signals
+    # 2. Vacancy signals (DOU Section 2)
     print('\nSearching vacancy signals...')
     vacancy_results = run_queries(VACANCY_QUERIES, period)
 
-    # 3. Opportunity signals
+    # 3. Opportunity signals (DOU Section 3)
     print('\nSearching opportunities...')
     opportunity_results = run_queries(OPPORTUNITY_QUERIES, period)
 
+    # 4. ENAP open selections
+    print('\nScraping ENAP /vagas/...')
+    enap_results = scrape_enap_vagas()
+    print(f'  ENAP: {len(enap_results)} listings found')
+
     # Combine radar results
-    radar_results = vacancy_results + opportunity_results
+    radar_results = vacancy_results + opportunity_results + enap_results
 
     # Save to CSV files
     ipea_new = save_results(ipea_results, 'dou_ipea.csv')
