@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 13 July, 2026
+ 	 14 July, 2026
 	Autorizar o Afastamento do País do servidor Rafael Henrique Moraes Pereira, ocupante do cargo de Técnico de Planejamento e Pesquisa, matrícula Siape nº *017*, em exercício na Coordenadoria Geral de Ciência de Dados e Tecnologia da Informação - CGDTI do Instituto de Pesquisa Econômica Aplicada - IPEA, a fim de ministrar dois Workshops sobre ciência de dados aplicada a mobilidade e transporte urbano, em eventos organizados pela Universidade Técnica de Munique, no período de 08 a 17/07/2026, em Munique/Alemanha., incluído trânsito, com ônus limitado.
 Nº 161 - Designar o servidor LUIZ MARCELO MICHELON ZARDO, Matrícula SIAPE nº XX209XX, para o encargo de substituto eventual do Coordenador de Relações Internacionais e Integração - CORIN, código FCE 1.10, da Coordenação-Geral de Estudos Internacionais - CGINT, da Diretoria de Estudos Internacionais - DINTE, do Instituto de Pesquisa Econômica Aplicada - IPEA.
 Nº 160 - Dispensar o servidor PEDRO SILVA BARROS, Matrícula SIAPE nº. XX050XX, do encargo de substituto eventual do Coordenador de Relações Internacionais e Integração - CORIN, código FCE 1.10, da Coordenação-Geral de Estudos Internacionais - CGINT, da Diretoria de Estudos Internacionais - DINTE, do Instituto de Pesquisa Econômica Aplicada - IPEA, em razão de sua remoção para a Coordenação de Relações Econômicas Externas - COREX, da mesma Diretoria de Estudos Internacionais - DINTE.
