@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 15 July, 2026
+ 	 16 July, 2026
 	Art. 1º Designar as servidoras BARBARA CRISTINA TAVARES DOS SANTOS CHAGAS, Matrícula SIAPE n° XX193XX, e RENATA SOARES PIAZZA DAL PONT, Matrícula SIAPE n° XX161XX, para atuarem como Pregoeiras Eventuais, para conduzir os procedimentos licitatórios na modalidade Pregão, na forma eletrônica.
 Designar o servidor DANILO LOPES ROGÉRIO, Matrícula SIAPE nº XX265XX, para, excepcionalmente, em virtude de férias do titular e afastamento para tratamento de saúde do substituto, responder pelas atribuições de Coordenador de Infraestrutura de Tecnologia e Informação - COTEC, código FCE 1.10, da Coordenação-Geral de Ciência de Dados e Tecnologia da Informação - CGDTI, do Instituto de Pesquisa Econômica Aplicada - IPEA, no período de 06 a 17 de julho de 2026.
 Autorizar o Afastamento do País do servidor Rafael Henrique Moraes Pereira, ocupante do cargo de Técnico de Planejamento e Pesquisa, matrícula Siape nº *017*, em exercício na Coordenadoria Geral de Ciência de Dados e Tecnologia da Informação - CGDTI do Instituto de Pesquisa Econômica Aplicada - IPEA, a fim de ministrar dois Workshops sobre ciência de dados aplicada a mobilidade e transporte urbano, em eventos organizados pela Universidade Técnica de Munique, no período de 08 a 17/07/2026, em Munique/Alemanha., incluído trânsito, com ônus limitado.
