@@ -41,17 +41,29 @@ jobs:
         if: steps.verify_diff.outputs.changed == 'true'
         run: git push origin HEAD:${{ github.ref_name }}
 
-      - name: Send email
-        if: steps.verify_diff.outputs.changed == 'true'
+      - name: Is it Friday?
+        id: dow
+        run: |
+          if [ "$(date -u +%u)" = "5" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "weekly=true" >> $GITHUB_OUTPUT
+          else
+            echo "weekly=false" >> $GITHUB_OUTPUT
+          fi
+
+      # Weekly only. Two months of daily mail produced ~3 items/day of which
+      # roughly one per three weeks was actionable, so it stopped being read.
+      - name: Send weekly digest
+        if: steps.dow.outputs.weekly == 'true' && hashFiles('WEEKLY.md') != ''
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
           server_port: 465
           username: ${{secrets.MAIL_USERNAME}}
           password: ${{secrets.MAIL_PASSWORD}}
-          subject: DOU Career Radar — new results
-          to: bb.cron.jobs@gmail.com
+          subject: DOU Career Radar — resumo da semana
+          to: furtadobb@gmail.com
           from: DOU Career Radar
-          body: Build job of ${{github.repository}} completed successfully!
+          html_body: file://WEEKLY.md
+          convert_markdown: true
           ignore_cert: true
-          attachments: README.md
+          attachments: WEEKLY.md

@@ -9,6 +9,7 @@ Output: CSV data files + email-ready digest in README.md
 """
 import os
 import re
+import csv
 import json
 import datetime
 import pandas as pd
@@ -29,49 +30,71 @@ IPEA_QUERIES = [
     {'query': 'ipea', 'secao': 2, 'label': 'IPEA Pessoal'},
 ]
 
-# Career radar: vacancy signals — broad + domain-targeted
+# Career radar: vacancy signals — DOU Section 2
+#
+# NOTE ON QUERY SYNTAX (verified live 2026-08-20):
+# The in.gov.br search honours ONE quoted phrase, or several unquoted terms.
+# It returns ZERO for two quoted phrases combined, and ZERO for `OR`.
+# e.g.  dispensar+"coordenador-geral"        -> 0 hits
+#       dispensar+coordenador-geral          -> 20 hits
+#       "processo+seletivo"+"avaliação"      -> 0 hits
+#       "processo+seletivo+simplificado"     -> 20 hits
+# Every query below was probed against the live endpoint and returns results.
+# Do not reintroduce multi-phrase or OR syntax without re-probing.
 VACANCY_QUERIES = [
     # Broad vacancy signals at any organ
     {'query': 'exonerar+CCE', 'secao': 2, 'label': 'Exoneração CCE'},
     {'query': 'exonerar+FCE', 'secao': 2, 'label': 'Exoneração FCE'},
-    {'query': 'dispensar+"coordenador-geral"', 'secao': 2, 'label': 'Dispensa Coord-Geral'},
+    {'query': 'exonerar+coordenador-geral', 'secao': 2, 'label': 'Exoneração Coord-Geral'},
+    {'query': 'dispensar+coordenador-geral', 'secao': 2, 'label': 'Dispensa Coord-Geral'},
     {'query': 'dispensar+diretor', 'secao': 2, 'label': 'Dispensa Diretor'},
-    # Domain-targeted: positions that mention expertise areas
-    {'query': '"ciência+de+dados"', 'secao': 2, 'label': 'Ciência de Dados'},
-    {'query': '"modelagem"+OR+"simulação"', 'secao': 2, 'label': 'Modelagem/Simulação'},
-    {'query': '"políticas+urbanas"+OR+"urbano-regional"', 'secao': 2, 'label': 'Urbano-Regional'},
+    # Domain-targeted: single quoted phrase only
     {'query': '"avaliação+de+políticas"', 'secao': 2, 'label': 'Avaliação Políticas'},
+    {'query': '"monitoramento+e+avaliação"', 'secao': 2, 'label': 'Monitoramento e Avaliação'},
+    {'query': '"ciência+de+dados"', 'secao': 2, 'label': 'Ciência de Dados'},
     {'query': '"inteligência+artificial"', 'secao': 2, 'label': 'IA'},
+    {'query': 'modelagem', 'secao': 2, 'label': 'Modelagem'},
 ]
 
-# Opportunity signals: selection processes, editais, chamamentos
+# Opportunity signals: selection processes, editais, chamamentos.
+# These run across Sections 1, 2 and 3 — editais surface in all three.
 OPPORTUNITY_QUERIES = [
-    # Formal selection processes — topic-targeted
-    {'query': '"processo+seletivo"+"modelagem"', 'secao': 3, 'label': 'Seleção Modelagem'},
-    {'query': '"processo+seletivo"+"avaliação"', 'secao': 3, 'label': 'Seleção Avaliação'},
-    {'query': '"processo+seletivo"+"simulação"', 'secao': 3, 'label': 'Seleção Simulação'},
-    {'query': '"processo+seletivo"+"cenários"', 'secao': 3, 'label': 'Seleção Cenários'},
-    {'query': '"processo+seletivo"+"políticas+públicas"', 'secao': 3, 'label': 'Seleção Pol. Públicas'},
-    {'query': '"processo+seletivo"+"pesquisa+aplicada"', 'secao': 3, 'label': 'Seleção Pesquisa'},
-    {'query': '"processo+seletivo"+"ciência+de+dados"', 'secao': 3, 'label': 'Seleção Data Science'},
-    # Broader signals — editais, chamamentos
-    {'query': '"edital+de+seleção"+"coordenador"', 'secao': 3, 'label': 'Edital Coordenador'},
-    {'query': '"edital+de+seleção"+"diretor"', 'secao': 3, 'label': 'Edital Diretor'},
-    {'query': '"seleção+simplificada"+CCE', 'secao': 3, 'label': 'Seleção CCE'},
-    {'query': '"seleção+simplificada"+DAS', 'secao': 3, 'label': 'Seleção DAS'},
-    {'query': '"chamada+pública"+"políticas+públicas"', 'secao': 3, 'label': 'Chamada Pol. Públicas'},
+    {'query': '"processo+seletivo+simplificado"', 'secao': 3, 'label': 'PSS (S3)'},
+    {'query': '"processo+seletivo+simplificado"', 'secao': 2, 'label': 'PSS (S2)'},
+    {'query': '"processo+seletivo+simplificado"', 'secao': 1, 'label': 'PSS (S1)'},
+    {'query': '"edital+de+seleção"', 'secao': 3, 'label': 'Edital de Seleção'},
+    {'query': '"edital+de+chamamento"', 'secao': 1, 'label': 'Edital de Chamamento'},
+    {'query': '"seleção+simplificada"', 'secao': 3, 'label': 'Seleção Simplificada'},
+    {'query': '"chamada+pública"', 'secao': 3, 'label': 'Chamada Pública'},
 ]
 
 # Organs to EXCLUDE — not relevant for career search
 EXCLUDED_ORGANS = [
+    # Level-1 hierarchy buckets — these were the 35% of stored noise:
+    # Poder Legislativo (26), Poder Judiciário (16), conselhos (13), TCU, Defesa, MRE.
+    'poder legislativo', 'poder judiciário', 'poder judiciario',
+    'entidades de fiscalização', 'entidades de fiscalizacao',
+    'conselho regional', 'conselho federal', 'ordem dos advogados',
+    'tribunal de contas',
+    'ministério da defesa', 'ministério das relações exteriores',
+    'senado federal', 'câmara dos deputados',
+    # Military / police
     'comando do exército', 'comando da marinha', 'comando da aeronáutica',
     'comando militar', 'estado-maior', 'força aérea',
     'polícia federal', 'polícia rodoviária',
-    'instituto federal de educação', 'universidade federal',
-    'colégio pedro ii', 'centro federal de educação tecnológica',
+    # Education / academia — not cessão targets for this profile
+    'instituto federal de educação', 'universidade federal', 'universidade da',
+    'fundação universidade', 'colégio pedro ii',
+    'centro federal de educação tecnológica',
+    'hospital universitário', 'empresa brasileira de serviços hospitalares',
+    # Courts / prosecution
     'tribunal regional', 'tribunal de justiça', 'tribunal superior',
     'justiça federal', 'justiça do trabalho',
-    'ministério público', 'procuradoria',
+    'ministério público', 'procuradoria', 'defensoria',
+    # Subnational — a federal servidor cannot be ceded into these
+    'prefeitura', 'governo do estado', 'câmara municipal',
+    'governo do distrito federal', 'assembleia legislativa',
+    # Operational agencies
     'receita federal',
     'instituto nacional do seguro social',
     'agência nacional de vigilância',
@@ -101,8 +124,8 @@ TARGET_ORGANS = [
     'fundação instituto de pesquisa econômica',
     'ministério da justiça',
     'ministério da igualdade racial',
-    'secretaria de governo',
     'presidência da república',
+    'casa civil da presidência',
     'ministério do trabalho',
     'ministério da saúde',
     'ministério da previdência',
@@ -110,9 +133,6 @@ TARGET_ORGANS = [
     'ministério dos transportes',
     'ministério da integração',
     'ministério do turismo',
-    'secretaria especial',
-    'secretaria executiva',
-    'secretaria nacional',
 ]
 
 # Minimum position level: coordenador-geral (1.13) and above.
@@ -205,9 +225,29 @@ def is_excluded_organ(item):
     return any(exc in organ_str for exc in EXCLUDED_ORGANS)
 
 
+# Sections 1 and 3 are dominated by purchasing, not hiring. These phrases mark a
+# procurement document, which no amount of expertise scoring makes relevant.
+PROCUREMENT_NOISE = [
+    'extrato de contrato', 'extrato de termo aditivo', 'termo aditivo',
+    'extrato de dispensa', 'extrato de inexigibilidade', 'extrato de convênio',
+    'resultado de julgamento', 'aviso de licitação', 'aviso de homologação',
+    'ata de registro de preços', 'pregão eletrônico', 'tomada de preços',
+    'concorrência pública', 'extrato de rescisão', 'aviso de anulação',
+    'aviso de suspensão', 'extrato de acordo', 'extrato de instrumento',
+    'credenciamento de leiloeiro', 'chamamento público para aquisição',
+]
+
+
+def is_procurement(text):
+    """True when the document is about buying something, not filling a post."""
+    return any(p in text for p in PROCUREMENT_NOISE)
+
+
 def is_noise(text):
-    """Detect noise: substituto, exonerar+nomear pairs, low-level positions."""
+    """Detect noise: procurement, substituto, exonerar+nomear pairs, low positions."""
     text_lower = text.lower()
+    if is_procurement(text_lower):
+        return True
     # Substituto eventual — not a real opening
     substituto_noise = [
         'substitut', 'responder pelas atribuições',
@@ -248,6 +288,45 @@ def score_expertise(text):
     return score, matched
 
 
+# A bare role word matches the person SIGNING the portaria as often as the vacancy:
+# "O DIRETOR DO DEPARTAMENTO DE GESTAO ... resolve: Dispensar ..." scored +2 for
+# "diretor" when the actual post being vacated was a Chefe de Divisao FC-3.
+# 36 of 65 position hits in the first two months were this false positive.
+# So: trust an explicit CCE/FCE/DAS code anywhere, but accept a role word only
+# when it is grammatically attached to a cargo/funcao being conferred or removed.
+ROLE_WORDS = r'coordenador[a]?-geral|diretor[a]?|assessor[a]? especial|secretári[oa]'
+CARGO_CONTEXT = re.compile(
+    r'(?:cargo|função|funcao|cargo comissionado executivo|'
+    r'função comissionada executiva|funcao comissionada executiva)'
+    r'\s+(?:comissionado\s+)?(?:executivo\s+)?(?:de\s+|da\s+|do\s+)?'
+    r'(' + ROLE_WORDS + r')',
+    re.IGNORECASE)
+# "exercer o cargo de X" / "para exercer a função de X"
+EXERCER_CONTEXT = re.compile(
+    r'exercer\s+(?:o|a)\s+(?:cargo|função|funcao)[^,\.]{0,40}?(' + ROLE_WORDS + r')',
+    re.IGNORECASE)
+
+
+def extract_target_position(full_text):
+    """Return the position level of the cargo actually at stake, or ''.
+
+    Prefers an explicit CCE/FCE/DAS code; falls back to a role word only when it
+    sits in cargo/função context. Returns '' for the signing-authority case.
+    """
+    # Explicit code — unambiguous, and already filtered for level by is_noise().
+    m = re.search(r'\b((?:CCE|FCE|DAS)\s*\d+\.\d+)\b', full_text, re.IGNORECASE)
+    if m:
+        code = re.sub(r'\s+', ' ', m.group(1).upper()).strip()
+        if any(code == kw.upper() for kw in POSITION_KEYWORDS):
+            return code
+        return ''  # a code we know about, but below coordenador-geral
+    for pat in (CARGO_CONTEXT, EXERCER_CONTEXT):
+        m = pat.search(full_text)
+        if m:
+            return m.group(1).lower()
+    return ''
+
+
 def classify_result(item):
     """Classify a DOU result and compute relevance score.
 
@@ -276,9 +355,11 @@ def classify_result(item):
         classification['type'] = 'skip'
         return classification
 
-    # +3 target organ
+    # +3 target organ — hierarchy ONLY.
+    # Matching against full_text made almost anything a "target": a portaria that
+    # merely cites "Ministério da Fazenda" in its legal preamble scored the +3.
     for organ in TARGET_ORGANS:
-        if any(organ in h for h in hierarchy) or organ in full_text:
+        if any(organ in h for h in hierarchy):
             classification['target_organ'] = True
             classification['relevance'] += 3
             break
@@ -303,12 +384,11 @@ def classify_result(item):
         classification['type'] = 'skip'
         return classification
 
-    # +2 position level
-    for kw in POSITION_KEYWORDS:
-        if kw.lower() in full_text:
-            classification['position_level'] = kw
-            classification['relevance'] += 2
-            break
+    # +2 position level — must be the cargo in question, not the signer.
+    pos = extract_target_position(full_text)
+    if pos:
+        classification['position_level'] = pos
+        classification['relevance'] += 2
 
     # Tiered expertise keywords
     exp_score, exp_matches = score_expertise(full_text)
@@ -519,14 +599,6 @@ def generate_digest(ipea_results, radar_results):
             lines.append(f'| {score} | {rtype} | {organ} | {pos} | {kw} | {link} |')
         lines.append('')
 
-    # --- Weekly SIGEPE reminder (Fridays only) ---
-    if datetime.date.today().weekday() == 4:
-        lines.append('---')
-        lines.append('**Checagem semanal:** '
-                     '[SIGEPE Oportunidades](https://oportunidades.sigepe.gov.br) '
-                     '— filtrar por coordenador-geral / diretor / CCE ≥ 1.13')
-        lines.append('')
-
     # --- Footer ---
     n_vac = sum(1 for r in radar_results if r['type'] == 'VAC')
     n_opp = sum(1 for r in radar_results if r['type'] == 'OPP')
@@ -537,6 +609,105 @@ def generate_digest(ipea_results, radar_results):
     lines.append('*Score: +3 organ/vacancy, +2 opportunity/position, '
                  '+1 movement. Keywords: +3 core, +2 domain, +1 context*')
 
+    return '\n'.join(lines)
+
+
+def _rel(row):
+    """Relevance as an int, whether the row came from a scan or from CSV."""
+    try:
+        return int(float(row.get('relevance', 0) or 0))
+    except (TypeError, ValueError):
+        return 0
+
+
+def _read_csv_window(filename, days=7):
+    """Return rows from a data CSV whose pubDate falls in the last `days` days."""
+    filepath = DATA_DIR / filename
+    if not filepath.exists():
+        return []
+    cutoff = datetime.date.today() - datetime.timedelta(days=days)
+    rows = []
+    with open(filepath, encoding='utf-8', newline='') as fh:
+        for row in csv.DictReader(fh, delimiter=';'):
+            try:
+                dt = datetime.datetime.strptime(row.get('date', ''), '%d/%m/%Y').date()
+            except (ValueError, TypeError):
+                continue
+            if dt >= cutoff:
+                rows.append({k: (v if v is not None else '') for k, v in row.items()})
+    return rows
+
+
+def generate_weekly_digest(days=7):
+    """Build the Friday digest from the accumulated CSVs, not just today's scan.
+
+    The daily README is a running log; this is the thing actually worth emailing.
+    Threshold is deliberately higher than the daily view (>=7, not >=5): two months
+    of data showed ~3 items/day at >=5, of which roughly one per three weeks
+    mattered. A weekly note with a handful of real leads beats a daily list nobody
+    opens.
+    """
+    today = datetime.date.today()
+    start = today - datetime.timedelta(days=days)
+    radar = _read_csv_window('dou_radar.csv', days)
+    ipea = _read_csv_window('dou_ipea.csv', days)
+
+    lines = [
+        f'# DOU Career Radar — semana de {start.strftime("%d/%m")} a {today.strftime("%d/%m/%Y")}',
+        '',
+    ]
+
+    def _fmt(rows, show_kw=True):
+        out = ['| Sc | Data | Órgão | Cargo | Palavras-chave | |',
+               '|---:|------|-------|-------|----------------|----|']
+        for r in rows:
+            kw = str(r.get('expertise_match', '') or '').replace('|', ', ')
+            out.append(
+                f'| {_rel(r)} | {r["date"]} '
+                f'| {format_organ_short(str(r["organ"]))} '
+                f'| {r.get("position_level", "") or ""} '
+                f'| {kw if show_kw else ""} '
+                f'| [>>]({r["url"]}) |'
+            )
+        return out
+
+    # --- Opportunities first: these are the actionable ones ---
+    opps = sorted([r for r in radar if r.get('type') == 'OPP'],
+                  key=lambda x: -_rel(x))
+    if opps:
+        lines += ['## Oportunidades', '', *_fmt(opps), '']
+
+    # --- Vacancies worth a look ---
+    vacs = sorted([r for r in radar
+                   if r.get('type') in ('VAC', 'MOV') and _rel(r) >= 7],
+                  key=lambda x: -_rel(x))
+    if vacs:
+        lines += [f'## Vagas abertas (score >= 7) — {len(vacs)} de '
+                  f'{sum(1 for r in radar if r.get("type") in ("VAC", "MOV"))} na semana',
+                  '', *_fmt(vacs), '']
+
+    # --- IPEA personnel ---
+    if ipea:
+        lines += ['## IPEA', '']
+        for r in ipea:
+            lines.append(f'- {summarize_ipea_item(r)} [>>]({r["url"]})')
+        lines.append('')
+
+    if not (opps or vacs or ipea):
+        lines += ['*Nada relevante esta semana.*', '']
+
+    lines += [
+        '---',
+        '**Checagem manual:** '
+        '[SIGEPE Oportunidades](https://oportunidades.sigepe.gov.br) '
+        '— filtrar por coordenador-geral / diretor / CCE >= 1.13. '
+        'Rode `python sigepe_check.py` localmente para consultar via API.',
+        '',
+        f'*Semana: {len(radar)} sinais no radar '
+        f'({sum(1 for r in radar if r.get("type") == "OPP")} OPP, '
+        f'{sum(1 for r in radar if r.get("type") == "VAC")} VAC), '
+        f'{len(ipea)} IPEA.*',
+    ]
     return '\n'.join(lines)
 
 
@@ -627,7 +798,7 @@ def main():
     print('\nSearching vacancy signals...')
     vacancy_results = run_queries(VACANCY_QUERIES, period)
 
-    # 3. Opportunity signals (DOU Section 3)
+    # 3. Opportunity signals (DOU Sections 1, 2 and 3)
     print('\nSearching opportunities...')
     opportunity_results = run_queries(OPPORTUNITY_QUERIES, period)
 
@@ -645,7 +816,7 @@ def main():
     print(f'\nNew IPEA entries: {ipea_new}')
     print(f'New radar entries: {radar_new}')
 
-    # Generate digest
+    # Daily digest — a running log committed to the repo, not emailed.
     has_news = ipea_new > 0 or radar_new > 0
     if has_news or not (DATA_DIR / 'dou_ipea.csv').exists():
         digest = generate_digest(ipea_results, radar_results)
@@ -654,6 +825,13 @@ def main():
         print('\nDigest written to README.md')
     else:
         print('\nNo new results today.')
+
+    # Weekly digest — this is what gets emailed (Fridays, or on demand).
+    if datetime.date.today().weekday() == 4 or os.environ.get('FORCE_WEEKLY'):
+        weekly = generate_weekly_digest()
+        with open('WEEKLY.md', 'w') as f:
+            f.write(weekly)
+        print('Weekly digest written to WEEKLY.md')
 
     return has_news
 
