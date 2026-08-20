@@ -700,8 +700,7 @@ def generate_weekly_digest(days=7):
         '---',
         '**Checagem manual:** '
         '[SIGEPE Oportunidades](https://oportunidades.sigepe.gov.br) '
-        '— filtrar por coordenador-geral / diretor / CCE >= 1.13. '
-        'Rode `python sigepe_check.py` localmente para consultar via API.',
+        '— filtrar por coordenador-geral / diretor / CCE >= 1.13.',
         '',
         f'*Semana: {len(radar)} sinais no radar '
         f'({sum(1 for r in radar if r.get("type") == "OPP")} OPP, '
