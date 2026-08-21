@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
 """
+SUPERSEDED by sigepe_editais.py — kept only as the record of a dead end.
+
+This module needs a gov.br bearer token AND an atribuição on the Oportunidades
+module that this account does not have (the login works; the page refuses it).
+sigepe_editais.py reaches the same editais through the portal's public,
+unauthenticated HTML listing, needs no token, and runs in CI. Use that.
+
 SIGEPE Oportunidades checker — runs LOCALLY, not in GitHub Actions.
 
 Why local: oportunidades.sigepe.gov.br is an Angular SPA backed by
@@ -40,7 +47,7 @@ from pathlib import Path
 
 import requests
 
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).parent.parent))  # moved to old/; career_radar lives one level up
 from career_radar import (  # noqa: E402
     score_expertise, TARGET_ORGANS, POSITION_KEYWORDS, LOW_POSITIONS,
 )

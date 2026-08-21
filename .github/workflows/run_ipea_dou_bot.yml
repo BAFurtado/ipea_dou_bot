@@ -1,5 +1,5 @@
-name: DOU Career Radar
-run-name: ${{ github.actor }} — DOU Career Radar scan
+name: Radar de Oportunidades
+run-name: ${{ github.actor }} — varredura SIGEPE + DOU
 on:
   schedule:
     - cron: '30 10 * * 1-5'
@@ -21,26 +21,8 @@ jobs:
       - name: Install dependencies
         run: pip install requests beautifulsoup4 pandas
 
-      - name: Run Career Radar
-        run: python career_radar.py
-
-      - name: Check for changes
-        id: verify_diff
-        run: |
-          git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
-
-      - name: Commit
-        if: steps.verify_diff.outputs.changed == 'true'
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -m "DOU Career Radar — $(date +%Y-%m-%d)"
-
-      - name: Push
-        if: steps.verify_diff.outputs.changed == 'true'
-        run: git push origin HEAD:${{ github.ref_name }}
-
+      # Decided before the run: career_radar.py only writes WEEKLY.md when it is
+      # Friday or FORCE_WEEKLY is set, so the flag has to reach the run step.
       - name: Is it Friday?
         id: dow
         run: |
@@ -50,8 +32,43 @@ jobs:
             echo "weekly=false" >> $GITHUB_OUTPUT
           fi
 
+      # career_radar.py also drives the SIGEPE edital scan (sigepe_editais.py).
+      # That portal is public — no gov.br token — so it runs fine in CI.
+      - name: Run radar
+        env:
+          FORCE_WEEKLY: ${{ steps.dow.outputs.weekly == 'true' && '1' || '' }}
+        run: python career_radar.py
+
+      # Only the outputs get committed, never `git add -A` over the whole tree:
+      # career_radar.py now imports sigepe_editais, so __pycache__/ appears at
+      # runtime and .gitignore is not versioned. An unscoped add would commit
+      # bytecode here, and would sweep up CVs/ on a local run.
+      - name: Check for changes
+        id: verify_diff
+        run: |
+          # --porcelain, not `git diff`: data/editais.csv, EDITAIS.md and
+          # WEEKLY.md are untracked on the first run and git diff cannot see them.
+          [ -z "$(git status --porcelain -- README.md WEEKLY.md EDITAIS.md data)" ] \
+            || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit
+        if: steps.verify_diff.outputs.changed == 'true'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for f in README.md WEEKLY.md EDITAIS.md data; do
+            [ -e "$f" ] && git add -A -- "$f"
+          done
+          git commit -m "Radar de Oportunidades — $(date +%Y-%m-%d)"
+
+      - name: Push
+        if: steps.verify_diff.outputs.changed == 'true'
+        run: git push origin HEAD:${{ github.ref_name }}
+
       # Weekly only. Two months of daily mail produced ~3 items/day of which
       # roughly one per three weeks was actionable, so it stopped being read.
+      # The digest now leads with open SIGEPE editais — posts you can still apply
+      # to — instead of DOU portarias naming whoever already took the job.
       - name: Send weekly digest
         if: steps.dow.outputs.weekly == 'true' && hashFiles('WEEKLY.md') != ''
         uses: dawidd6/action-send-mail@v3
@@ -60,9 +77,9 @@ jobs:
           server_port: 465
           username: ${{secrets.MAIL_USERNAME}}
           password: ${{secrets.MAIL_PASSWORD}}
-          subject: DOU Career Radar — resumo da semana
+          subject: Radar de Oportunidades — editais abertos e vagas da semana
           to: furtadobb@gmail.com
-          from: DOU Career Radar
+          from: Radar de Oportunidades
           html_body: file://WEEKLY.md
           convert_markdown: true
           ignore_cert: true

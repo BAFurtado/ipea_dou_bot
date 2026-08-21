@@ -159,27 +159,47 @@ LOW_POSITIONS = [
 ]
 
 # Keywords weighted by how closely they match the user's actual expertise.
-# Tier 1 (+3): core — modeling/evaluation applied to policy, the actual draw
+#
+# These are REGEXES, not substrings. Two months of real editais showed why:
+#   "agentes"   matched "agentes públicos federais" — boilerplate in every edital
+#   "modelagem" matched "Coordenação de Modelagem de Processos" — BPM, not ABM
+# Both scored +3 on documents with nothing to do with this profile. So each
+# pattern now either carries its own context or excludes the collisions.
+
+# Tier 1 (+3): core — modelling/evaluation applied to policy, the actual draw
 EXPERTISE_TIER1 = [
-    'modelagem', 'simulação', 'cenários', 'avaliação ex-ante',
-    'avaliação de impacto', 'contrafactual', 'sistemas complexos',
-    'agentes', 'agent-based', 'econometria espacial',
-    'evidências', 'política baseada em evidências',
+    (r'modelagem(?!\s+de\s+(?:processos|neg[óo]cios|dados|amea[çc]as))', 'modelagem'),
+    (r'\bsimula(?:ção|cao)\b', 'simulação'),
+    (r'\bcen[áa]rios\b(?!\s+de\s+risco)', 'cenários'),
+    (r'avalia(?:ção|cao)\s+ex[-\s]?ante', 'avaliação ex-ante'),
+    (r'avalia(?:ção|cao)\s+de\s+impacto', 'avaliação de impacto'),
+    (r'contrafactual|contrafactuais', 'contrafactual'),
+    (r'sistemas?\s+complexos?', 'sistemas complexos'),
+    (r'(?:basead[oa]s?\s+em|multi[-\s]?)agentes|agent[-\s]based', 'modelo de agentes'),
+    (r'econometria|economia\s+espacial', 'econometria'),
+    (r'baseada?\s+em\s+evid[êe]ncias', 'baseada em evidências'),
 ]
-# Tier 2 (+2): domain areas where modeling expertise applies directly
+# Tier 2 (+2): domain areas where modelling expertise applies directly
 EXPERTISE_TIER2 = [
-    'urbano', 'urbana', 'habitação', 'habitacional', 'metropolitano',
-    'metrópoles', 'espacial', 'infraestrutura',
-    'avaliação de políticas', 'monitoramento e avaliação',
-    'planejamento estratégico', 'transição energética',
-    'desenvolvimento sustentável',
+    (r'\burban[oa]s?\b|\bmetropolitan|metr[óo]poles', 'urbano'),
+    (r'habita(?:ção|cao)|habitacional', 'habitação'),
+    (r'espacial(?!\s+de\s+nomes)|geoespacial', 'espacial'),
+    (r'avalia(?:ção|cao)\s+de\s+pol[íi]ticas', 'avaliação de políticas'),
+    (r'monitoramento\s+e\s+avalia(?:ção|cao)', 'monitoramento e avaliação'),
+    (r'planejamento\s+estrat[ée]gico', 'planejamento estratégico'),
+    (r'transi(?:ção|cao)\s+energ[ée]tica', 'transição energética'),
+    (r'desenvolvimento\s+sustent[áa]vel', 'desenvolvimento sustentável'),
+    (r'\bprospec(?:ção|cao)\b|estudos?\s+prospectivos?', 'prospecção'),
 ]
 # Tier 3 (+1): supporting skills — relevant but not the core draw
 EXPERTISE_TIER3 = [
-    'ciência de dados', 'inteligência artificial',
-    'geoprocessamento', 'pesquisa aplicada',
-    'desenvolvimento regional', 'políticas públicas',
-    'meio ambiente',
+    (r'ci[êe]ncia\s+de\s+dados', 'ciência de dados'),
+    (r'intelig[êe]ncia\s+artificial', 'inteligência artificial'),
+    (r'geoprocessamento|\bSIG\b', 'geoprocessamento'),
+    (r'pesquisa\s+aplicada|\bpesquisador', 'pesquisa'),
+    (r'desenvolvimento\s+regional', 'desenvolvimento regional'),
+    (r'pol[íi]ticas\s+p[úu]blicas', 'políticas públicas'),
+    (r'infraestrutura(?!\s+(?:tecnol[óo]gica|de\s+TI|de\s+rede))', 'infraestrutura'),
 ]
 
 
@@ -270,21 +290,13 @@ def is_noise(text):
 
 
 def score_expertise(text):
-    """Score expertise match using tiered keywords. Returns (score, matched_keywords)."""
-    matched = []
-    score = 0
-    for kw in EXPERTISE_TIER1:
-        if kw in text:
-            score += 3
-            matched.append(f'{kw}(+3)')
-    for kw in EXPERTISE_TIER2:
-        if kw in text:
-            score += 2
-            matched.append(f'{kw}(+2)')
-    for kw in EXPERTISE_TIER3:
-        if kw in text:
-            score += 1
-            matched.append(f'{kw}(+1)')
+    """Score expertise match using tiered regexes. Returns (score, [labels])."""
+    matched, score = [], 0
+    for tier, pts in ((EXPERTISE_TIER1, 3), (EXPERTISE_TIER2, 2), (EXPERTISE_TIER3, 1)):
+        for pat, label in tier:
+            if re.search(pat, text, re.IGNORECASE):
+                score += pts
+                matched.append(f'{label}(+{pts})')
     return score, matched
 
 
@@ -638,76 +650,104 @@ def _read_csv_window(filename, days=7):
     return rows
 
 
-def generate_weekly_digest(days=7):
-    """Build the Friday digest from the accumulated CSVs, not just today's scan.
+# An IPEA portaria is only news if it moved someone into or out of a post. Two
+# months of digests were dominated by "PORTARIA DIDES Nº 169" — acts that correct
+# the legal basis of a pensioner's aposentadoria, or grant licenças. The old
+# filter let them through because the boilerplate contains verbs like "designar",
+# and the fallback printed the title whenever no name was extracted.
+# So: match the dispositive verb where it actually appears — right after "Art. Nº".
+IPEA_DISPOSITIVO = re.compile(
+    r'Art\.?\s*\d+[ºo]?\s*[-–]?\s*'
+    r'(DESIGNAR|DISPENSAR|EXONERAR|NOMEAR|CEDER|REQUISITAR|TORNAR SEM EFEITO)',
+    re.IGNORECASE)
+IPEA_CARGO_CODE = re.compile(r'\b(?:CCE|FCE|DAS)\s*\d+\.\d+\b', re.IGNORECASE)
+IPEA_MOVEMENT = re.compile(
+    r'\bcess(?:ão|ao)\b|\brequisi(?:ção|cao)\b|afastamento do pa[íi]s|'
+    r'\bvac[âa]ncia\b|posse em outro cargo', re.IGNORECASE)
 
-    The daily README is a running log; this is the thing actually worth emailing.
-    Threshold is deliberately higher than the daily view (>=7, not >=5): two months
-    of data showed ~3 items/day at >=5, of which roughly one per three weeks
-    mattered. A weekly note with a handful of real leads beats a daily list nobody
-    opens.
+
+def _is_ipea_personnel(result):
+    """True when the portaria actually moves a person, not paperwork about one."""
+    text = str(result.get('content_preview', ''))
+    return bool(IPEA_DISPOSITIVO.search(text)
+                or IPEA_CARGO_CODE.search(text)
+                or IPEA_MOVEMENT.search(text))
+
+
+def generate_weekly_digest(days=7):
+    """The Friday email. Editais first, DOU second, IPEA last.
+
+    The ordering is the point. The DOU tells you who *took* a post after it was
+    filled — useful only as a lagging indicator. A SIGEPE edital tells you a post
+    is open and how to apply. So the digest now leads with editais and keeps the
+    DOU only for the one thing it does earlier than anyone: a coordenador-geral
+    or diretor being exonerated with nobody named to replace them.
     """
     today = datetime.date.today()
     start = today - datetime.timedelta(days=days)
     radar = _read_csv_window('dou_radar.csv', days)
-    ipea = _read_csv_window('dou_ipea.csv', days)
+    ipea = [r for r in _read_csv_window('dou_ipea.csv', days) if _is_ipea_personnel(r)]
 
-    lines = [
-        f'# DOU Career Radar — semana de {start.strftime("%d/%m")} a {today.strftime("%d/%m/%Y")}',
-        '',
-    ]
+    lines = [f'# Radar de Oportunidades — semana de {start.strftime("%d/%m")} '
+             f'a {today.strftime("%d/%m/%Y")}', '']
 
-    def _fmt(rows, show_kw=True):
-        out = ['| Sc | Data | Órgão | Cargo | Palavras-chave | |',
-               '|---:|------|-------|-------|----------------|----|']
-        for r in rows:
-            kw = str(r.get('expertise_match', '') or '').replace('|', ', ')
-            out.append(
-                f'| {_rel(r)} | {r["date"]} '
-                f'| {format_organ_short(str(r["organ"]))} '
-                f'| {r.get("position_level", "") or ""} '
-                f'| {kw if show_kw else ""} '
-                f'| [>>]({r["url"]}) |'
-            )
-        return out
+    # --- 1. SIGEPE editais: the actionable section ---------------------------
+    lines += _editais_section()
 
-    # --- Opportunities first: these are the actionable ones ---
-    opps = sorted([r for r in radar if r.get('type') == 'OPP'],
-                  key=lambda x: -_rel(x))
-    if opps:
-        lines += ['## Oportunidades', '', *_fmt(opps), '']
-
-    # --- Vacancies worth a look ---
+    # --- 2. DOU: posts that just went vacant with no successor named ---------
     vacs = sorted([r for r in radar
-                   if r.get('type') in ('VAC', 'MOV') and _rel(r) >= 7],
+                   if r.get('type') == 'VAC'
+                   and _rel(r) >= 8
+                   and str(r.get('position_level', '')).strip()],
                   key=lambda x: -_rel(x))
+    lines += ['## Cargos que vagaram no DOU', '']
     if vacs:
-        lines += [f'## Vagas abertas (score >= 7) — {len(vacs)} de '
-                  f'{sum(1 for r in radar if r.get("type") in ("VAC", "MOV"))} na semana',
-                  '', *_fmt(vacs), '']
+        lines += ['*Ninguém nomeado no mesmo ato — o posto pode estar realmente aberto.*', '',
+                  '| Sc | Data | Órgão | Cargo | Tema | |',
+                  '|---:|------|-------|-------|------|----|']
+        for r in vacs[:12]:
+            kw = str(r.get('expertise_match', '') or '').replace('|', ', ')
+            lines.append(f'| {_rel(r)} | {r["date"]} '
+                         f'| {format_organ_short(str(r["organ"]))} '
+                         f'| {r.get("position_level", "")} | {kw} '
+                         f'| [>>]({r["url"]}) |')
+        lines.append('')
+    else:
+        lines += ['*Nenhuma exoneração de coordenador-geral ou acima sem '
+                  'substituto nomeado.*', '']
 
-    # --- IPEA personnel ---
+    # --- 3. IPEA -------------------------------------------------------------
     if ipea:
         lines += ['## IPEA', '']
-        for r in ipea:
-            lines.append(f'- {summarize_ipea_item(r)} [>>]({r["url"]})')
+        lines += [f'- {summarize_ipea_item(r)} [>>]({r["url"]})' for r in ipea]
         lines.append('')
 
-    if not (opps or vacs or ipea):
-        lines += ['*Nada relevante esta semana.*', '']
-
-    lines += [
-        '---',
-        '**Checagem manual:** '
-        '[SIGEPE Oportunidades](https://oportunidades.sigepe.gov.br) '
-        '— filtrar por coordenador-geral / diretor / CCE >= 1.13.',
-        '',
-        f'*Semana: {len(radar)} sinais no radar '
-        f'({sum(1 for r in radar if r.get("type") == "OPP")} OPP, '
-        f'{sum(1 for r in radar if r.get("type") == "VAC")} VAC), '
-        f'{len(ipea)} IPEA.*',
-    ]
+    lines += ['---',
+              f'*Semana: {len(radar)} sinais no DOU, {len(vacs)} vagas reais, '
+              f'{len(ipea)} movimentações no Ipea.*']
     return '\n'.join(lines)
+
+
+def _editais_section(min_score=3):
+    """The actionable section, read from data/editais.csv written by the daily scan."""
+    try:
+        import sigepe_editais as se
+        openish = se.load_open(days=7)
+    except Exception as e:
+        return ['## Editais abertos no SIGEPE', '', f'*indisponível: {e}*', '']
+
+    top = [r for r in openish if r['score'] >= min_score]
+    out = ['## Editais abertos no SIGEPE', '']
+    if top:
+        out += [se.HEAD] + [se._row(r) for r in top] + ['']
+    else:
+        out += [f'*{len(openish)} editais abertos, nenhum acima do corte '
+                f'(score >= {min_score}). Nada que justifique uma cessão.*', '']
+    out += [f'*{len(openish)} abertos · '
+            f'{sum(1 for r in openish if r["is_new"])} novos esta semana · '
+            '[portal completo](https://oportunidades.sigepe.gov.br/'
+            'oportunidades-portal/api/html/?p=1)*', '']
+    return out
 
 
 def scrape_enap_vagas():
@@ -801,7 +841,16 @@ def main():
     print('\nSearching opportunities...')
     opportunity_results = run_queries(OPPORTUNITY_QUERIES, period)
 
-    # 4. ENAP open selections
+    # 4. SIGEPE editais — the forward-looking source; see sigepe_editais.py
+    print('\nVarrendo editais do SIGEPE...')
+    try:
+        import sigepe_editais as se
+        ed_records, ed_new = se.scan()
+        print(f'  {len(ed_records)} editais, {len(ed_new)} novos')
+    except Exception as e:
+        print(f'  ! portal de editais indisponível: {e}')
+
+    # 5. ENAP open selections
     print('\nScraping ENAP /vagas/...')
     enap_results = scrape_enap_vagas()
     print(f'  ENAP: {len(enap_results)} listings found')
