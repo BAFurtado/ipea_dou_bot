@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 27 August, 2026
+ 	 28 August, 2026
 	Designar a servidora BÁRBARA CRISTINA TAVARES DOS SANTOS CHAGAS, matrícula SIAPE nº XX193XX, para o encargo de substituta eventual da Coordenação de Compras e Contratos - COCCT, código FCE 1.10, da Coordenação-Geral de Contratações, Serviços Gerais e Apoio à Pesquisa - CGCAP, da Diretoria de Desenvolvimento Institucional - DIDES do Instituto de Pesquisa Econômica Aplicada - IPEA, nos afastamentos e impedimentos legais ou regulamentares do titular.
 Autorizar o afastamento do País da servidora LUANA SIMÕES PINHEIRO, Diretora do Departamento de Economia do Cuidado da Secretaria Nacional da Política de Cuidados e Família, deste Ministério, para participar, na qualidade de palestrante, da Sessão Especial organizada pelo Instituto de Pesquisa Econômica Aplicada - Ipea, intitulada "Medições de Uso do Tempo: Desafios na Quantificação do Trabalho Doméstico Não Remunerado e de Cuidados", no âmbito do 7º Encontro da Sociedade de Economia da Família e de Gênero - GeFam, a realizar-se na cidade de Montevidéu, República Oriental do Uruguai, no período de 10 de setembro de 2026.
 MILITARES DO MINISTÉRIO DA DEFESA, DAS FORÇAS ARMADAS E DA ESD
