@@ -2,7 +2,7 @@
  This is an attempt to automate changes of personnel at an specific federal entity in Brazil: Ipea
  
                         Very last change: 
- 	 21 October, 2026
+ 	 22 October, 2026
 	Nº 245 - Designar a servidora AMANDA TIEMI SHIRAISHI, matrícula SIAPE nº XX531XX, para o encargo de substituto eventual da Chefe da Divisão de Cadastro - DVCAD, código FCE 1.07, da Coordenação de Administração de Pessoal - COADP, da Coordenação-Geral de Gestão de Pessoas - CGPES, da Diretoria de Desenvolvimento Institucional - DIDES, do Instituto de Pesquisa Econômica Aplicada - IPEA, nos afastamentos e impedimentos legais da titular.
 Nº 244 - Dispensar o servidor ROBERTO RODRIGUES DA CUNHA COSTA, Matrícula SIAPE nº XX771XX, do encargo de substituto eventual da Chefe da Divisão de Cadastro - DVCAD, código FCE 1.07, da Coordenação de Administração de Pessoal - COADP, da Coordenação-Geral de Gestão de Pessoas - CGPES, da Diretoria de Desenvolvimento Institucional - DIDES, do Instituto de Pesquisa Econômica Aplicada - IPEA.
 Designar o servidor ANDRÉ GUSTAVO DE MIRANDA PINELI ALVES, Matrícula SIAPE nº XX172XX, para, excepcionalmente, responder pelas atribuições do cargo de Diretor de Estudos Internacionais - DINTE, código CCE 1.15, do Instituto de Pesquisa Econômica Aplicada - Ipea, no período de 29 de outubro a 2 de novembro de 2026, em virtude das férias da titular e ausência do substituto.
